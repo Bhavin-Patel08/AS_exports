@@ -1,4 +1,4 @@
-<!doctype html>
+<doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -13,7 +13,18 @@
       name="description"
       content="AS Exports is a leading manufacturer of poly packaging products including LDPE bags, HM rolls, stretch films and garbage bags. High quality packaging solutions for industrial and export markets."
     />
+    <meta
+      property="og:title"
+      content="AS Exports - Poly Packaging Manufacturer"
+    />
+    <meta
+      property="og:description"
+      content="Leading manufacturer of LDPE Bags, Stretch Film, Garbage Bags and Poly Packaging Products."
+    />
+    <meta property="og:image" content="img/logo4.png" />
+    <meta property="og:type" content="website" />
 
+    <link rel="canonical" href="https://asexports.com/" />
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
 
@@ -73,14 +84,19 @@
           </a>
           <div class="ms-auto d-flex align-items-center">
             <small class="ms-4"
-              ><i class="fa fa-map-marker-alt me-3"></i>Ring Road, Sura</small
+              ><i class="fa fa-map-marker-alt me-3"></i>Ring Road, Surat</small
             >
-            <small class="ms-4"
-              ><i class="fa fa-envelope me-3"></i>info@example.com</small
-            >
-            <small class="ms-4"
-              ><i class="fa fa-phone-alt me-3"></i>+917718877123</small
-            >
+            <small class="ms-4">
+              <a href="mailto:info@asexports.com">
+                <i class="fa fa-envelope me-2"></i>info@asexports.com
+              </a>
+            </small>
+
+            <small class="ms-4">
+              <a href="tel:+917718877123">
+                <i class="fa fa-phone-alt me-2"></i>+91 77188 77123
+              </a>
+            </small>
             <div class="ms-3 d-flex">
               <a class="btn btn-sm-square bg-white ms-2" href="">
                 <i class="fab fa-facebook-f" style="color: #1877f2"></i>
@@ -92,7 +108,7 @@
 
               <a
                 class="btn btn-sm-square bg-white ms-2"
-                href=""
+                href="https://www.instagram.com/bubnapolysackindustries?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -125,31 +141,132 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
-              <a href="index.html" class="nav-item nav-link active">Home</a>
+              <a href="index.html" class="nav-item nav-link">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
-              <div class="nav-item dropdown">
+
+              <!-- Products Mega Dropdown -->
+              <div class="nav-item dropdown mega-dropdown">
                 <a
-                  href="product.html"
+                  href="#"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   >Products</a
                 >
-                <div
-                  class="dropdown-menu bg-light rounded-0 rounded-bottom m-0"
-                >
-                  <a href="ldpe-bags.html" class="dropdown-item">LDPE Bags</a>
-                  <a href="hm-rolls.html" class="dropdown-item">HM Rolls</a>
-                  <a href="garbage-bags.html" class="dropdown-item"
-                    >Garbage Bags</a
-                  >
-                  <a href="stretch-film.html" class="dropdown-item"
-                    >Stretch Film</a
-                  >
+                <div class="dropdown-menu mega-menu">
+                  <div class="row g-3">
+                    <!-- g-3 for spacing -->
+
+                    <!-- Product Card -->
+                    <div class="col-6 col-md-3">
+                      <a
+                        href="PP_HDPE WOVEN SACK_BAG.html"
+                        class="dropdown-item product-card"
+                      >
+                        <img
+                          src="img/product/pp-hdpe-woven-sack-bags.png"
+                          alt="PP/HDPE Woven Sack"
+                          class="product-img"
+                        />
+                        <span>PP/HDPE Woven Sack/Bag</span>
+                      </a>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <a
+                        href="BOPP_bags.html"
+                        class="dropdown-item product-card"
+                      >
+                        <img
+                          src="img/product/bopp-bag.png"
+                          alt="Bopp Sack/Bag"
+                          class="product-img"
+                        />
+                        <span>Bopp Sack/Bag</span>
+                      </a>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <a href="fibc.html" class="dropdown-item product-card">
+                        <img
+                          src="img/product/fibc.png"
+                          alt="FIBC"
+                          class="product-img"
+                        />
+                        <span>FIBC</span>
+                      </a>
+                    </div>
+
+                    <!-- Add more products in the same pattern -->
+                    <div class="col-6 col-md-3">
+                      <a href="sling.html" class="dropdown-item product-card">
+                        <img
+                          src="img/product/Sling_bag.png"
+                          alt="Sling Bag"
+                          class="product-img"
+                        />
+                        <span>Sling Bag</span>
+                      </a>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <a
+                        href="TARPAULIN.html"
+                        class="dropdown-item product-card"
+                      >
+                        <img
+                          src="img/product/tarps.png"
+                          alt="Tarpaulin"
+                          class="product-img"
+                        />
+                        <span>Tarpaulin</span>
+                      </a>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <a
+                        href="DUNNAGE BAG.html"
+                        class="dropdown-item product-card"
+                      >
+                        <img
+                          src="img/product/inflatable-dunnage-bag.png"
+                          alt="DUNNAGE BAG"
+                          class="product-img"
+                        />
+                        <span>Dunnage Bag</span>
+                      </a>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <a
+                        href="Leno_Mesh Bag.html"
+                        class="dropdown-item product-card"
+                      >
+                        <img
+                          src="img/product/leno_mesh_bag.png"
+                          alt="Leno Mesh Bag"
+                          class="product-img"
+                        />
+                        <span>Leno/Mesh Bag</span>
+                      </a>
+                    </div>
+
+                    <div class="col-6 col-md-3">
+                      <a
+                        href="PP_HDPE WOVEN FABRIC PRODUCTS.html"
+                        class="dropdown-item product-card"
+                      >
+                        <img
+                          src="img/product/woven-fabric-rolls.png"
+                          alt="PP/HDPE Woven Fabric Product"
+                          class="product-img"
+                        />
+                        <span>PP/HDPE Woven Fabric Product</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <a href="product.html" class="nav-item nav-link"
-                >Infrastructure</a
-              >
+
               <a href="gallery.html" class="nav-item nav-link">Gallery</a>
               <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
@@ -161,6 +278,7 @@
       </div>
     </div>
     <!-- Navbar End -->
+
 
     <section class="hero-header">
       <div class="hero-overlay"></div>
