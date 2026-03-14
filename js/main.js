@@ -103,3 +103,16 @@
     
 })(jQuery);
 
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+
+    const active = document.querySelector(".faq-item.active");
+    if(active && active !== button.parentElement){
+      active.classList.remove("active");
+    }
+
+    button.parentElement.classList.toggle("active");
+
+  });
+});
+

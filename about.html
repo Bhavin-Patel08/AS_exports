@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
 
     <title>
-      About AS Exports | PP HDPE Woven Bags & Poly Packaging Manufacturer India
+      AS Exports | PP Woven Bags, HDPE Woven Sacks & FIBC Jumbo Bags
+      Manufacturer
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,7 +45,7 @@
       property="og:image"
       content="https://asexports.com/img/og-banner.jpg"
     />
-
+    <meta property="og:site_name" content="AS Exports" />
     <!-- Twitter -->
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -61,9 +62,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      as="style"
     />
+    <link rel="preload" as="image" href="img/logo4.png" />
 
     <!-- Icons -->
     <link
@@ -74,6 +77,14 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css"
     />
 
     <!-- Libraries -->
@@ -90,20 +101,24 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "AS Exports",
-        "url": "https://asexports.com",
-        "logo": "https://asexports.com/img/logo4.png",
-        "description": "Manufacturer and exporter of PP woven bags, HDPE woven sacks, BOPP laminated bags and FIBC jumbo bags from India.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Surat",
-          "addressRegion": "Gujarat",
-          "addressCountry": "India"
-        },
-        "sameAs": [
-          "https://www.linkedin.com/company/as-exports",
-          "https://www.facebook.com/asexports"
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What are PP woven bags used for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "PP woven bags are used for packaging agricultural products, fertilizers, chemicals and industrial materials."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AS Exports export packaging products worldwide?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, AS Exports supplies poly packaging products to customers in more than 25 countries worldwide."
+            }
+          }
         ]
       }
     </script>
@@ -123,7 +138,7 @@
     </div>
     <!-- Spinner End -->
 
-     <!-- Topbar Start -->
+    <!-- Topbar Start -->
     <div
       class="container-fluid text-white d-none d-lg-flex wow fadeIn"
       data-wow-delay="0.1s"
@@ -132,40 +147,39 @@
       <div class="container py-3">
         <div class="d-flex align-items-center">
           <a href="index.html" class="logo-container">
-            <img src="img/logo4.png" alt="Logo" class="logo-img" />
+            <img
+              src="img/logo4.png"
+              alt="AS Exports Poly Packaging Manufacturer India"
+              class="logo-img"
+              loading="lazy"
+            />
           </a>
           <div class="ms-auto d-flex align-items-center">
-            <small class="ms-4"
-              ><i class="fa fa-map-marker-alt me-3"></i>Ring Road, Surat</small
-            >
             <small class="ms-4">
-              <a href="mailto:info@asexports.com">
+              <a href="mailto:info@asexports.com" rel="nofollow">
                 <i class="fa fa-envelope me-2"></i>info@asexports.com
               </a>
             </small>
 
             <small class="ms-4">
-              <a href="tel:+917718877123">
-                <i class="fa fa-phone-alt me-2"></i>+91 77188 77123
+              <a href="tel:+919714321888" rel="nofollow">
+                <i class="fa fa-phone-alt me-2"></i>+91 97143 21888
               </a>
             </small>
             <div class="ms-3 d-flex">
-              <a class="btn btn-sm-square bg-white ms-2" href="">
-                <i class="fab fa-facebook-f" style="color: #1877f2"></i>
-              </a>
+              <div class="ms-4 d-flex align-items-center export-badges">
+                <small class="ms-3">
+                  <i class="fas fa-industry me-1"></i> Manufacturer
+                </small>
 
-              <a class="btn btn-sm-square bg-white ms-2" href="">
-                <i class="fab fa-twitter" style="color: #1da1f2"></i>
-              </a>
+                <small class="ms-3">
+                  <i class="fas fa-globe me-1"></i> Export to 20+ Countries
+                </small>
 
-              <a
-                class="btn btn-sm-square bg-white ms-2"
-                href="https://www.instagram.com/bubnapolysackindustries?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-instagram" style="color: #0077b5"></i>
-              </a>
+                <small class="ms-3">
+                  <i class="fas fa-award me-1"></i> Premium Quality
+                </small>
+              </div>
             </div>
           </div>
         </div>
@@ -194,12 +208,12 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
               <a href="index.html" class="nav-item nav-link">Home</a>
-              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="about.html" class="nav-item nav-link active">About</a>
 
               <!-- Products Mega Dropdown -->
               <div class="nav-item dropdown mega-dropdown">
                 <a
-                  href="products.html"
+                  href="product.html"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
@@ -220,6 +234,7 @@
                           src="img/product/pp-hdpe-woven-sack-bags.png"
                           alt="PP/HDPE Woven Sack"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>PP/HDPE Woven Sack/Bag</span>
                       </a>
@@ -235,6 +250,7 @@
                           src="img/product/bopp-bag.png"
                           alt="Bopp Sack/Bag"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>Bopp Sack/Bag</span>
                       </a>
@@ -250,6 +266,7 @@
                           src="img/product/fibc.png"
                           alt="FIBC"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>FIBC</span>
                       </a>
@@ -266,6 +283,7 @@
                           src="img/product/Sling_bag.png"
                           alt="Sling Bag"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>Sling Bag</span>
                       </a>
@@ -281,6 +299,7 @@
                           src="img/product/tarps.png"
                           alt="Tarpaulin"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>Tarpaulin</span>
                       </a>
@@ -296,6 +315,7 @@
                           src="img/product/inflatable-dunnage-bag.png"
                           alt="DUNNAGE BAG"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>Dunnage Bag</span>
                       </a>
@@ -311,6 +331,7 @@
                           src="img/product/leno_mesh_bag.png"
                           alt="Leno Mesh Bag"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>Leno/Mesh Bag</span>
                       </a>
@@ -326,6 +347,7 @@
                           src="img/product/woven-fabric-rolls.png"
                           alt="PP/HDPE Woven Fabric Product"
                           class="product-img"
+                          loading="lazy"
                         />
                         <span>PP/HDPE Woven Fabric Product</span>
                       </a>
@@ -349,35 +371,30 @@
     <!-- Navbar End -->
 
     <!-- Premium Page Header Start -->
-    <section class="premium-header">
-      <div class="header-overlay">
-        <div class="container text-center">
-          <h1 class="display-4 text-white text-uppercase mb-3 wow fadeInDown">
-            About AS Exports
-          </h1>
-
-          <p class="header-tagline mb-4 wow fadeInUp">
-            High Quality Poly Packaging Manufacturer & Global Exporter
-          </p>
-
-          <!-- Breadcrumb -->
-          <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-4">
-              <li class="breadcrumb-item">
-                <a href="index.html">Home</a>
-              </li>
-
-              <li class="breadcrumb-item active text-white">About</li>
-            </ol>
-          </nav>
-
-          <!-- CTA Button -->
-          <a href="contact.html" class="btn btn-light btn-lg px-4">
-            Request a Quote
-          </a>
-        </div>
+    
+    <div
+      class="container-fluid page-header contact-header py-5 mb-6 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-5">
+        <h1 class="display-4 text-uppercase text-white mb-3">
+          About AS Exports
+        </h1>
+        <p class="text-white fs-5 fw-light mb-3">
+          Global Packaging Solutions for Industrial & Export Markets
+        </p>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center text-uppercase">
+            <li class="breadcrumb-item">
+              <a href="index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item active text-white" aria-current="page">
+              About Us
+            </li>
+          </ol>
+        </nav>
       </div>
-    </section>
+    </div>
     <!-- Premium Page Header End -->
 
     <!-- About Intro Start -->
@@ -386,18 +403,23 @@
         <div class="row align-items-center g-5">
           <!-- Image -->
           <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
-            <img
-              src="img/about.jpg"
-              class="img-fluid rounded shadow about-img"
-              alt="AS Exports Manufacturing"
-            />
+            <div class="about-image-box">
+              <img
+                src="img/aboutpg.png"
+                alt="PP Woven Bags Manufacturing Unit in Surat India"
+                loading="lazy"
+              />
+
+              <!-- Small badge -->
+              <div class="about-badge">10+ Years<br />Experience</div>
+            </div>
           </div>
 
           <!-- Content -->
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.4s">
-            <h6 class="text-primary text-uppercase fw-bold mb-2">
+            <h2 class="text-primary text-uppercase fw-bold mb-2">
               About AS Exports
-            </h6>
+            </h2>
 
             <h1 class="display-6 text-uppercase mb-4">
               Leading Manufacturer of Poly Packaging Solutions
@@ -473,7 +495,7 @@
     <div class="container-fluid py-6 bg-light">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-6 text-uppercase">Our Global Presence</h1>
+          <h2 class="display-6 text-uppercase">Our Global Presence</h2>
           <p>
             Trusted packaging manufacturer delivering quality across industries
           </p>
@@ -482,7 +504,7 @@
         <div class="row text-center g-4">
           <div class="col-lg-3 col-md-6">
             <div class="stat-box">
-              <h2>15+</h2>
+              <h2>10+</h2>
               <p>Years Experience</p>
             </div>
           </div>
@@ -513,10 +535,10 @@
     <!-- Company Stats End -->
 
     <!-- Philosophy Start -->
-    <div class="container-fluid philosophy-section py-6 bg-light">
+    <div class="container-fluid philosophy-section py-6 bg-white">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-6 text-uppercase">Our Philosophy</h1>
+          <h2 class="display-6 text-uppercase">Our Philosophy</h2>
           <p>
             Principles that drive our quality, innovation, and customer
             commitment.
@@ -603,7 +625,12 @@
     <div class="container-fluid py-6 bg-light">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-6 text-uppercase">Our Manufacturing Process</h1>
+          <h2 class="display-6 text-uppercase">Our Manufacturing Process</h2>
+          <p class="mb-4 text-center">
+            Our manufacturing process ensures consistent quality and durability
+            in every poly packaging product we produce.
+          </p>
+
           <p>
             From raw material to finished packaging products with strict quality
             control
@@ -693,7 +720,7 @@
     <div class="container-fluid py-6">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-6 text-uppercase">Manufacturing Excellence</h1>
+          <h2 class="display-6 text-uppercase">Manufacturing Excellence</h2>
           <p>Advanced technology and quality-driven production</p>
         </div>
 
@@ -739,54 +766,151 @@
       </div>
     </div>
     <!-- Manufacturing Strength End -->
-
-    <!-- Industries Start -->
-    <div class="container-fluid py-6">
+    <!-- Why Choose Us Start -->
+    <div class="container-fluid py-6 bg-bg-white">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-6 text-uppercase">Industries We Serve</h1>
-          <p>Providing packaging solutions for diverse industrial sectors</p>
+          <h2 class="display-6 text-uppercase">Why Choose AS Exports</h2>
         </div>
 
-        <div class="row g-4 text-center">
+        <div class="row g-4">
           <div class="col-lg-3 col-md-6">
-            <div class="industry-box">
-              <i class="fa fa-seedling"></i>
-              <h5>Agriculture</h5>
-              <p>Durable sacks and bags for grains, seeds, and fertilizers.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="industry-box">
-              <i class="fa fa-box"></i>
-              <h5>Food & Grain</h5>
+            <div class="choose-card text-center">
+              <div class="choose-icon">
+                <i class="fa fa-award"></i>
+              </div>
+              <h5>Premium Quality</h5>
               <p>
-                Reliable packaging for rice, wheat, sugar, and food products.
+                Manufactured using high-grade PP and HDPE raw materials ensuring
+                durability and strength.
               </p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="industry-box">
-              <i class="fa fa-industry"></i>
-              <h5>Chemical Industry</h5>
+            <div class="choose-card text-center">
+              <div class="choose-icon">
+                <i class="fa fa-globe"></i>
+              </div>
+              <h5>Global Export</h5>
               <p>
-                High-strength packaging for chemicals and industrial materials.
+                Supplying reliable poly packaging solutions to customers across
+                international markets.
               </p>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-6">
-            <div class="industry-box">
-              <i class="fa fa-truck"></i>
-              <h5>Logistics</h5>
-              <p>Secure packaging for transportation and supply chains.</p>
+            <div class="choose-card text-center">
+              <div class="choose-icon">
+                <i class="fa fa-cogs"></i>
+              </div>
+              <h5>Advanced Machinery</h5>
+              <p>
+                Equipped with modern manufacturing technology for high
+                production efficiency.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="choose-card text-center">
+              <div class="choose-icon">
+                <i class="fa fa-users"></i>
+              </div>
+              <h5>Customer Focus</h5>
+              <p>
+                Dedicated team providing reliable service and long-term business
+                relationships.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Why Choose Us End -->
+    <!-- Industries Start -->
+    <section class="industries-section py-6">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title text-uppercase">Industries We Serve</h2>
+          <p class="text-muted">
+            Providing durable poly packaging solutions for diverse industrial
+            sectors worldwide
+          </p>
+        </div>
+
+        <div class="row g-4 text-center">
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-seedling"></i>
+              <h5>Agriculture</h5>
+              <p>Packaging solutions for grains, seeds, and fertilizers.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-box"></i>
+              <h5>Food & Grain</h5>
+              <p>Strong woven bags for rice, wheat, sugar and food products.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-industry"></i>
+              <h5>Chemical Industry</h5>
+              <p>Reliable packaging for chemicals and industrial materials.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-truck"></i>
+              <h5>Logistics</h5>
+              <p>
+                Secure packaging solutions for transportation and supply chains.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-hard-hat"></i>
+              <h5>Construction</h5>
+              <p>Durable sacks for cement, sand and building materials.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-drumstick-bite"></i>
+              <h5>Animal Feed</h5>
+              <p>Strong woven bags for poultry feed and livestock products.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-shopping-basket"></i>
+              <h5>FMCG</h5>
+              <p>Packaging for consumer goods and retail supply chains.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="industry-card">
+              <i class="fa fa-mountain"></i>
+              <h5>Mining</h5>
+              <p>
+                Heavy-duty bags for minerals, powders and industrial materials.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Industries End -->
 
     <!-- Export Countries Start -->
@@ -799,27 +923,45 @@
 
         <div class="row text-center g-4">
           <div class="col-lg-2 col-md-4 col-6">
-            <div class="country-box">USA</div>
+            <div class="country-box">
+              <span class="fi fi-us"></span>
+              <p>USA</p>
+            </div>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <div class="country-box">UAE</div>
+            <div class="country-box">
+              <span class="fi fi-ae"></span>
+              <p>UAE</p>
+            </div>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <div class="country-box">UK</div>
+            <div class="country-box">
+              <span class="fi fi-gb"></span>
+              <p>UK</p>
+            </div>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <div class="country-box">Germany</div>
+            <div class="country-box">
+              <span class="fi fi-de"></span>
+              <p>Germany</p>
+            </div>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <div class="country-box">Australia</div>
+            <div class="country-box">
+              <span class="fi fi-au"></span>
+              <p>Australia</p>
+            </div>
           </div>
 
           <div class="col-lg-2 col-md-4 col-6">
-            <div class="country-box">South Africa</div>
+            <div class="country-box">
+              <span class="fi fi-za"></span>
+              <p>South Africa</p>
+            </div>
           </div>
         </div>
       </div>
@@ -827,47 +969,77 @@
     <!-- Export Countries End -->
 
     <!-- Factory Gallery Start -->
-    <div class="container-fluid py-6 bg-light">
+    <div class="container-fluid py-6 bg-bg-white">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-6 text-uppercase">Our Factory</h1>
+          <h2 class="display-6 text-uppercase">Our Factory</h2>
           <p>Inside our modern manufacturing facility</p>
         </div>
 
         <div class="row g-4">
           <div class="col-lg-4 col-md-6">
             <div class="factory-img">
-              <img src="img/factory-1.jpg" class="img-fluid" alt="" />
+              <img
+                src="img/factory-1.png"
+                class="img-fluid"
+                alt="PP Woven Bags Manufacturing Factory"
+                loading="lazy"
+              />
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="factory-img">
-              <img src="img/factory-2.jpg" class="img-fluid" alt="" />
+              <img
+                src="img/factory-2.png"
+                class="img-fluid"
+                alt="PP Woven Bags Manufacturing Factory"
+                loading="lazy"
+              />
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="factory-img">
-              <img src="img/factory-3.jpg" class="img-fluid" alt="" />
+              <img
+                src="img/factory-3.png"
+                class="img-fluid"
+                alt="PP Woven Bags Manufacturing Factory"
+                loading="lazy"
+              />
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="factory-img">
-              <img src="img/factory-4.jpg" class="img-fluid" alt="" />
+              <img
+                src="img/factory-4.png"
+                class="img-fluid"
+                alt="PP Woven Bags Manufacturing Factory"
+                loading="lazy"
+              />
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="factory-img">
-              <img src="img/factory-5.jpg" class="img-fluid" alt="" />
+              <img
+                src="img/factory-5.png"
+                class="img-fluid"
+                alt="PP Woven Bags Manufacturing Factory"
+                loading="lazy"
+              />
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6">
             <div class="factory-img">
-              <img src="img/factory-6.jpg" class="img-fluid" alt="" />
+              <img
+                src="img/factory-6.png"
+                class="img-fluid"
+                alt="PP Woven Bags Manufacturing Factory"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -879,103 +1051,184 @@
     <div class="container-fluid py-6 bg-light">
       <div class="container">
         <div class="text-center mb-5">
-          <h1 class="display-6 text-uppercase">Trusted By Clients</h1>
+          <h2 class="display-6 text-uppercase">Trusted By Clients</h2>
           <p>Companies that trust our packaging solutions</p>
         </div>
 
-        <div class="row text-center g-4 align-items-center">
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="img/client1.png" class="img-fluid client-logo" />
-          </div>
+        <div class="swiper clientSwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide text-center">
+              <img
+                src="img/client1.png"
+                class="img-fluid client-logo"
+                alt="Golden Grain Trades"
+                loading="lazy"
+              />
+            </div>
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="img/client2.png" class="img-fluid client-logo" />
-          </div>
+            <div class="swiper-slide text-center">
+              <img
+                src="img/client2.png"
+                class="img-fluid client-logo"
+                alt="Green Harvest Agro"
+                loading="lazy"
+              />
+            </div>
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="img/client3.png" class="img-fluid client-logo" />
-          </div>
+            <div class="swiper-slide text-center">
+              <img
+                src="img/client3.png"
+                class="img-fluid client-logo"
+                alt="Global cement Supply"
+                loading="lazy"
+              />
+            </div>
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="img/client4.png" class="img-fluid client-logo" />
-          </div>
+            <div class="swiper-slide text-center">
+              <img
+                src="img/client4.png"
+                class="img-fluid client-logo"
+                alt="Agrofresh LTD"
+                loading="lazy"
+              />
+            </div>
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="img/client5.png" class="img-fluid client-logo" />
-          </div>
+            <div class="swiper-slide text-center">
+              <img
+                src="img/client5.png"
+                class="img-fluid client-logo"
+                alt="Apex Chemicals"
+                loading="lazy"
+              />
+            </div>
 
-          <div class="col-lg-2 col-md-4 col-6">
-            <img src="img/client6.png" class="img-fluid client-logo" />
+            <div class="swiper-slide text-center">
+              <img
+                src="img/client6.png"
+                class="img-fluid client-logo"
+                alt="Prime Retail Product"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <!-- Clients End -->
 
-    <!-- CTA Section Start -->
-    <div class="container-fluid text-white py-6" style="background: #0b2c5f">
-      <div class="container text-center">
-        <h2 class="mb-4">Looking for Reliable Poly Packaging Solutions?</h2>
+    <!-- Inquiry -->
+    <section class="cta-section">
+      <div class="cta-overlay"></div>
 
-        <p class="mb-4">
-          Contact AS Exports today for customized packaging products and export
-          orders.
+      <div class="container text-center cta-content">
+        <h2>Need Bulk Packaging Solutions for Export?</h2>
+        <p>
+          Request a quotation for container load shipments of PP woven bags,
+          FIBC jumbo bags, BOPP laminated bags, tarpaulin sheets and industrial
+          packaging products. Our export team will respond within 24 hours.
         </p>
 
-        <a href="contact.html" class="btn btn-light btn-lg">
-          Request a Quote
-        </a>
-      </div>
-    </div>
-    <!-- CTA Section End -->
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn cta-btn-primary"
+            >Request Export Quote</a
+          >
 
-    <!-- Newsletter Start -->
-    <div
-      class="container-fluid newsletter mt-6 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container pb-5">
-        <div class="bg-white p-5 mb-5">
-          <div class="row g-5">
-            <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
-              <h1 class="display-6 text-uppercase mb-4">Newsletter</h1>
-              <div class="d-flex">
-                <i class="far fa-envelope-open fa-3x text-primary me-4"></i>
-                <p class="fs-5 fst-italic mb-0">
-                  Dolores sed duo clita tempor justo dolor et stet lorem kasd
-                  labore lorem ipsum.
-                </p>
+          <a
+            href="https://wa.me/919714321888?text=Hello%20AS%20Exports,%20I%20need%20a%20quotation%20for%20bulk%20packaging%20products."
+            class="btn cta-btn-outline"
+            rel="noopener"
+          >
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Start -->
+    <section class="faq2-section py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="faq2-title">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq2-wrapper">
+          <div class="faq2-list">
+            <div class="faq2-item">
+              <button class="faq2-question">
+                What are PP woven bags used for?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq2-answer">
+                PP woven bags are widely used for packaging agricultural
+                products, food grains, fertilizers, chemicals, and industrial
+                materials due to their high strength and durability.
               </div>
             </div>
-            <div class="col-md-6 wow fadeIn" data-wow-delay="0.5s">
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control border-0 bg-light"
-                  id="mail"
-                  placeholder="Your Email"
-                />
-                <label for="mail">Your Email</label>
-              </div>
-              <button class="btn btn-primary w-100 py-3" type="submit">
-                Submit Now
+
+            <div class="faq2-item">
+              <button class="faq2-question">
+                Do you export packaging products internationally?
+                <i class="fas fa-chevron-down"></i>
               </button>
+              <div class="faq2-answer">
+                Yes, AS Exports supplies poly packaging products to customers in
+                more than 25 countries including Europe, Middle East, Africa,
+                and the USA.
+              </div>
+            </div>
+
+            <div class="faq2-item">
+              <button class="faq2-question">
+                Do you provide custom printed woven bags?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq2-answer">
+                Yes, we provide custom printing options including branding,
+                logos, product details and multi-color printing.
+              </div>
+            </div>
+
+            <div class="faq2-item">
+              <button class="faq2-question">
+                What industries use FIBC jumbo bags?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="faq2-answer">
+                FIBC bags are widely used in chemical, agriculture, mining,
+                construction, and food industries for bulk material handling.
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Newsletter End -->
-
+    </section>
+    <!-- FAQ End -->
     <!-- Footer Start -->
-
     <footer class="footer">
       <div class="container footer-main">
-        <!-- Logo Section -->
+        <!-- Logo & About -->
         <div class="footer-section footer-left">
-          <img src="img/logo4.png" alt="AS Exports Logo" class="footer-logo" />
+          <img
+            src="img/logo4.png"
+            alt="AS Exports Logo"
+            class="footer-logo"
+            loading="lazy"
+          />
 
           <p class="footer-tagline">Excellence in Poly Packaging Solutions</p>
+
+          <p class="footer-desc">
+            AS Exports is a trusted manufacturer and exporter of high-quality
+            poly packaging products including PP woven bags, FIBC jumbo bags,
+            HDPE tarpaulin sheets, BOPP laminated bags and industrial packaging
+            materials serving global industries with reliable packaging
+            solutions.
+          </p>
+
+          <p class="footer-markets">
+            <strong>Export Markets:</strong><br />
+            UK • Europe • Middle East • Africa
+          </p>
 
           <div class="footer-social">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -991,8 +1244,11 @@
 
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="product.html">All Products</a></li>
+            <li><a href="pp-hdpe-woven-sack-bag.html">PP Woven Bags</a></li>
+            <li><a href="fibc.html">FIBC Jumbo Bags</a></li>
+            <li><a href="tarpaulin.html">HDPE Tarpaulin</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
 
@@ -1000,13 +1256,15 @@
         <div class="footer-section">
           <h4>Contact Us</h4>
 
+          <!-- India Office -->
           <p class="footer-address">
             <i class="fa fa-map-marker-alt"></i>
             <span>
-              <strong>AS Exports</strong><br />
+              <strong>AS Exports – India Office</strong><br />
               <a
                 href="https://maps.app.goo.gl/NjEyPYkzqP5jGK6z8"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Office-409/A, Akshar Diamond<br />
                 Varachha Road<br />
@@ -1017,13 +1275,44 @@
           </p>
 
           <p>
-            <i class="fa fa-phone-alt"></i
-            ><a href="tel:+917718877123">+91 77188 77123</a>
+            <i class="fa fa-phone-alt"></i>
+            <a href="tel:+919714321888">+91 97143 21888</a>
+          </p>
+
+          <!-- UK Office -->
+          <p class="footer-address" style="margin-top: 15px">
+            <i class="fa fa-map-marker-alt"></i>
+            <span>
+              <strong>AS Exports – UK Office</strong><br />
+              <a
+                href="https://maps.app.goo.gl/JPqq8YKHqnUJ4HMY7"
+                target="_blank"
+              >
+                263 Manchester Road<br />
+                Postcode M28 3HH<br />
+                United Kingdom
+              </a>
+            </span>
+          </p>
+
+          <p>
+            <i class="fa fa-phone-alt"></i>
+            <a href="tel:+447852542225">+44 78525 42225</a>
+          </p>
+
+          <!-- Emails -->
+          <p>
+            <i class="fa fa-envelope"></i>
+            <strong>General Inquiry:</strong>
+            <a href="mailto:info@asexports.com" rel="noopener"
+              >info@asexports.com</a
+            >
           </p>
 
           <p>
             <i class="fa fa-envelope"></i>
-            <a href="mailto:info@asexports.com">info@asexports.com</a>
+            <strong>Sales Inquiry:</strong>
+            <a href="mailto:sales@asexports.com">sales@asexports.com</a>
           </p>
         </div>
 
@@ -1042,35 +1331,99 @@
         </div>
       </div>
 
+      <!-- Footer Bottom -->
       <div class="footer-bottom">
         <p>© 2026 <strong>AS Exports</strong>. All Rights Reserved.</p>
 
-        <p>
-          Designed by <span class="designer">Finora Tech</span> | Distributed by
-          Bhavin Patel
-        </p>
+        <p>Website Design & Development: Finora Tech</p>
       </div>
-
-      <a href="https://wa.me/917718877123" class="whatsapp-float">
+      <!-- Call Button -->
+      <a
+        href="tel:+919714321888"
+        class="call-float"
+        aria-label="Call AS Exports"
+        aria-label="Call AS Exports"
+      >
+        <i class="fas fa-phone-alt"></i>
+      </a>
+      <!-- Floating Request Quote Button -->
+      <a href="contact.html" class="quote-float" aria-label="Request Quote">
+        <i class="fas fa-file-alt"></i> Request Quote
+      </a>
+      <!-- WhatsApp Button -->
+      <a
+        href="https://wa.me/919714321888?text=Hello%20AS%20Exports,%20I%20want%20inquiry%20about%20poly%20packaging%20products."
+        class="whatsapp-float"
+        aria-label="Chat on WhatsApp"
+      >
         <i class="fab fa-whatsapp"></i>
       </a>
 
-      <a href="#" class="back-to-top">
+      <!-- Back to Top -->
+      <a href="#" class="back-to-top" aria-label="Back to Top">
         <i class="bi bi-arrow-up"></i>
       </a>
     </footer>
     <!-- Footer End -->
-
     <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script
+      defer
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <script defer src="lib/wow/wow.min.js"></script>
+    <script defer src="lib/easing/easing.min.js"></script>
+    <script defer src="lib/waypoints/waypoints.min.js"></script>
+    <script defer src="lib/counterup/counterup.min.js"></script>
+    <script defer src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Swiper -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
 
     <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script defer src="js/main.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        /* Swiper Client Slider */
+        new Swiper(".clientSwiper", {
+          slidesPerView: 5,
+          spaceBetween: 30,
+          loop: true,
+          speed: 800, // slide animation speed
+
+          autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+          },
+
+          breakpoints: {
+            0: { slidesPerView: 2 },
+            576: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            992: { slidesPerView: 5 },
+          },
+        });
+
+        /* FAQ Toggle */
+        document.querySelectorAll(".faq2-question").forEach((button) => {
+          button.addEventListener("click", () => {
+            const active = document.querySelector(".faq2-item.active");
+
+            if (active && active !== button.parentElement) {
+              active.classList.remove("active");
+            }
+
+            button.parentElement.classList.toggle("active");
+          });
+        });
+      });
+    </script>
   </body>
 </html>
