@@ -320,6 +320,13 @@ a[href^="tel:"]:hover {
     border-color: #ff7a00;
 }
 
+.product-card.active {
+    background-color: #fff3e0;
+    /* subtle hover background */
+    color: #ff7a00;
+    /* hover text color */
+    border-color: #ff7a00;
+}
 .product-card img.product-img {
     width: 50px;
     height: 50px;
