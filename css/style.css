@@ -1499,12 +1499,32 @@ a[href^="tel:"]:hover {
     font-size: 13px;
     color: #777;
 }
-
 .footer-bottom a {
     color: #ff7a00;
     font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+.footer-bottom a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #ff7a00;
+    transition: width 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom a:hover::after {
+    width: 100%;
+}
 /* Call Button (lowest on right) */
 .call-float {
     position: fixed;
@@ -1548,7 +1568,7 @@ a[href^="tel:"]:hover {
 }
 
 .quote-float:hover {
-    background: #e46d00;
+    background: #FFD700;
     transform: translateY(-3px);
 }
 
