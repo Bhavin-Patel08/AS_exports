@@ -566,9 +566,7 @@
                   <i class="fas fa-ruler-combined"></i> Custom Size & Printing
                 </li>
                 <li><i class="fas fa-award"></i> Premium Quality Materials</li>
-                <li>
-                  <i class="fas fa-shipping-fast"></i> Fast Global Shipping
-                </li>
+               
               </ul>
 
               <h4>Export Markets</h4>
@@ -821,9 +819,12 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>© 2026 <strong>AS Exports</strong>. All Rights Reserved.</p>
+        <p>
+          © 2026 <strong><a href="https://asexports.in">AS Exports</a></strong
+          >. All Rights Reserved.
+        </p>
 
-        <p>Website Design & Development: Finora Tech</p>
+        <p>Website Design & Development: <a href="#">Finora Tech</a></p>
       </div>
       <!-- Call Button -->
       <a
@@ -881,24 +882,13 @@
 
           let form = this;
 
-          // Send email to admin
+          // Send email to admin only
           emailjs
             .sendForm("service_yxny79g", "template_9ff7s5f", form)
-
-            .then(function () {
-              // Send auto reply to customer
-              return emailjs.sendForm(
-                "service_yxny79g",
-                "template_gcr7msl",
-                form,
-              );
-            })
-
             .then(function () {
               alert("Thank you! Your inquiry has been sent successfully.");
               form.reset();
             })
-
             .catch(function (error) {
               alert("Something went wrong. Please try again.");
             });
