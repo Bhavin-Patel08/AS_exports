@@ -180,3 +180,26 @@ document.querySelectorAll(".faq-question").forEach(button => {
     });
 
 });
+
+
+const backToTop = document.getElementById("backToTop");
+
+window.addEventListener("scroll", function () {
+
+    let scrollTop = document.documentElement.scrollTop;
+    let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    let scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    backToTop.style.background =
+        `conic-gradient(#ff7a00 ${scrollPercent}%, #2a2a2a ${scrollPercent}%)`;
+});
+
+/* smooth scroll to top */
+backToTop.addEventListener("click", function(e){
+    e.preventDefault();
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+});

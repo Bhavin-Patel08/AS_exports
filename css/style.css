@@ -259,6 +259,13 @@ a[href^="tel:"]:hover {
     border-color: #ff7a00;
 }
 
+.product-card.active {
+    background-color: #fff3e0;
+    /* subtle hover background */
+    color: #ff7a00;
+    /* hover text color */
+    border-color: #ff7a00;
+}
 .product-card img.product-img {
     width: 50px;
     height: 50px;
@@ -1355,14 +1362,39 @@ a[href^="tel:"]:hover {
     font-size: 13px;
     color: #777;
 }
-
 .footer-bottom a {
     color: #ff7a00;
     font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* WhatsApp Button */
 .whatsapp-float {
+=======
+.footer-bottom a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #ff7a00;
+    transition: width 0.3s ease;
+}
+
+.footer-bottom a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom a:hover::after {
+    width: 100%;
+}
+/* Call Button (lowest on right) */
+.call-float {
+>>>>>>> 8e450912809b2b93f5aaa70c0730835d2ccc00c3
     position: fixed;
     bottom: 25px;
     left: 25px;
@@ -1380,8 +1412,14 @@ a[href^="tel:"]:hover {
     transition: 0.3s;
 }
 
+<<<<<<< HEAD
 .whatsapp-float:hover {
     transform: scale(1.1);
+=======
+.quote-float:hover {
+    background: #FFD700;
+    transform: translateY(-3px);
+>>>>>>> 8e450912809b2b93f5aaa70c0730835d2ccc00c3
 }
 
 /* Back to Top */

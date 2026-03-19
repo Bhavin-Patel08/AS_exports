@@ -32,7 +32,7 @@
     <meta name="geo.region" content="IN-GJ" />
     <meta name="geo.placename" content="Surat" />
     <meta name="geo.position" content="21.1702;72.8311" />
-    <link rel="canonical" href="https://asexports.com/contact.html" />
+    <link rel="canonical" href="https://asexports.in/contact.html" />
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon" />
 
@@ -69,8 +69,8 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "AS Exports",
-        "url": "https://asexports.com",
-        "logo": "https://asexports.com/img/logo4.png",
+        "url": "https://asexports.in",
+        "logo": "https://asexports.in/img/logo4.png",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+91-97143-21888",
@@ -316,6 +316,22 @@
                         <span>PP/HDPE Woven Fabric Product</span>
                       </a>
                     </div>
+
+                    <div class="col-6 col-md-3">
+                      <a
+                        href="product.html"
+                        title="All Product Page"
+                        class="dropdown-item product-card"
+                      >
+                        <img
+                          src="img/product/all-products.png"
+                          alt="All products page"
+                          class="product-img"
+                          loading="lazy"
+                        />
+                        <span>All Products</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -550,9 +566,7 @@
                   <i class="fas fa-ruler-combined"></i> Custom Size & Printing
                 </li>
                 <li><i class="fas fa-award"></i> Premium Quality Materials</li>
-                <li>
-                  <i class="fas fa-shipping-fast"></i> Fast Global Shipping
-                </li>
+               
               </ul>
 
               <h4>Export Markets</h4>
@@ -660,7 +674,9 @@
         </p>
 
         <div class="cta-buttons">
-          <a href="contact.html" class="btn cta-btn-primary">Request Export Quote</a>
+          <a href="contact.html" class="btn cta-btn-primary"
+            >Request Export Quote</a
+          >
 
           <a
             href="https://wa.me/919714321888?text=Hello%20AS%20Exports,%20I%20need%20a%20quotation%20for%20bulk%20packaging%20products."
@@ -803,9 +819,12 @@
 
       <!-- Footer Bottom -->
       <div class="footer-bottom">
-        <p>© 2026 <strong>AS Exports</strong>. All Rights Reserved.</p>
+        <p>
+          © 2026 <strong><a href="https://asexports.in">AS Exports</a></strong
+          >. All Rights Reserved.
+        </p>
 
-        <p>Website Design & Development: Finora Tech</p>
+        <p>Website Design & Development: <a href="#">Finora Tech</a></p>
       </div>
       <!-- Call Button -->
       <a
@@ -863,24 +882,13 @@
 
           let form = this;
 
-          // Send email to admin
+          // Send email to admin only
           emailjs
             .sendForm("service_yxny79g", "template_9ff7s5f", form)
-
-            .then(function () {
-              // Send auto reply to customer
-              return emailjs.sendForm(
-                "service_yxny79g",
-                "template_gcr7msl",
-                form,
-              );
-            })
-
             .then(function () {
               alert("Thank you! Your inquiry has been sent successfully.");
               form.reset();
             })
-
             .catch(function (error) {
               alert("Something went wrong. Please try again.");
             });
