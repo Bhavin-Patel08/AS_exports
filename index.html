@@ -42,6 +42,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="preload" as="video" href="img/vpt-1.mp4" type="video/mp4" />
 
     <!-- Icon Font Stylesheet -->
@@ -179,168 +183,109 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
-              <a href="/" class="nav-item nav-link active">Home</a>
-              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link active">About</a>
 
-              <!-- Products Mega Dropdown -->
-              <div class="nav-item dropdown mega-dropdown">
+              <!-- PRODUCTS DROPDOWN -->
+              <div class="nav-item dropdown position-static">
                 <a
-                  href="product.html"
+                  href="#"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  aria-haspopup="true"
                 >
                   Products
                 </a>
-                <div class="dropdown-menu mega-menu">
-                  <div class="row g-3">
-                    <!-- g-3 for spacing -->
 
-                    <!-- Product Card -->
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="pp-hdpe-woven-sack-bag.html"
-                        title="PP HDPE Woven Sack Bags Manufacturer India"
-                        class="dropdown-item product-card"
-                      >
+                <div class="dropdown-menu mega-dropdown p-4 border-0 shadow-lg">
+                  <div class="row">
+                    <!-- LEFT SIDE (ALL LINKS) -->
+                    <div class="col-md-8">
+                      <div class="row">
+                        <!-- PP PRODUCTS -->
+                        <div class="col-md-4 border-end">
+                          <h5>PP Products</h5>
+
+                          <a
+                            href="pp-sack-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/pp-hdpe-woven-sack-bags.png"
+                          >
+                            PP Sack Bags
+                          </a>
+
+                          <a
+                            href="bopp-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/bopp-bag.png"
+                          >
+                            BOPP Bags
+                          </a>
+
+                          <a
+                            href="fibc-jumbo.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/fibc.png"
+                          >
+                            FIBC Jumbo Bags
+                          </a>
+                        </div>
+
+                        <!-- NON-WOVEN -->
+                        <div class="col-md-4 border-end">
+                          <h5>Non-Woven</h5>
+
+                          <a
+                            href="nonwoven-fabric.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/nonwoven.png"
+                          >
+                            Non-Woven Fabric
+                          </a>
+
+                          <a
+                            href="nonwoven-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/nonwoven-bag.png"
+                          >
+                            Non-Woven Bags
+                          </a>
+                        </div>
+
+                        <!-- PAPER -->
+                        <div class="col-md-4">
+                          <h5>Paper</h5>
+
+                          <a
+                            href="paper-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/paper-bag.png"
+                          >
+                            Paper Bags
+                          </a>
+
+                          <a
+                            href="kraft-paper-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/kraft-bag.png"
+                          >
+                            Kraft Paper Bags
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- RIGHT SIDE (IMAGE PREVIEW) -->
+                    <div
+                      class="col-md-4 d-none d-lg-flex align-items-center justify-content-center"
+                    >
+                      <div class="preview-box text-center">
                         <img
+                          id="previewImage"
                           src="img/product/pp-hdpe-woven-sack-bags.png"
-                          alt="PP/HDPE Woven Sack"
-                          class="product-img"
-                          loading="lazy"
+                          class="img-fluid"
                         />
-                        <span>PP/HDPE Woven Sack/Bag</span>
-                      </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="BOPP_bags.html"
-                        title="BOPP Laminated Woven Bags Manufacturer India"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/bopp-bag.png"
-                          alt="Bopp Sack/Bag"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>Bopp Sack/Bag</span>
-                      </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="fibc.html"
-                        title="FIBC Jumbo Bags Manufacturer India"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/fibc.png"
-                          alt="FIBC"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>FIBC</span>
-                      </a>
-                    </div>
-
-                    <!-- Add more products in the same pattern -->
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="sling.html"
-                        title="FIBC Sling Bags Manufacturer for Industrial Lifting"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/Sling_bag.png"
-                          alt="Sling Bag"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>Sling Bag</span>
-                      </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="tarpaulin.html"
-                        title="HDPE Tarpaulin Sheets Manufacturer & Waterproof Tarps Supplier"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/tarps.png"
-                          alt="HDPE Tarpaulin Sheets Manufacturer India"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>Tarpaulin</span>
-                      </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="dunnage-bag.html"
-                        title="Inflatable Dunnage Bags Manufacturer for Cargo Protection"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/inflatable-dunnage-bag.png"
-                          alt="DUNNAGE BAG"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>Dunnage Bag</span>
-                      </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="leno-mesh-bag.html"
-                        title="Leno Mesh Bags Manufacturer for Onion Potato Packaging"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/leno_mesh_bag.png"
-                          alt="Leno Mesh Bag"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>Leno/Mesh Bag</span>
-                      </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="pp-hdpe-woven-fabric-products.html"
-                        title="PP HDPE Woven Fabric Rolls/Sheets Manufacturer India"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/woven-fabric-rolls.png"
-                          alt="PP/HDPE Woven Fabric Product"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>PP/HDPE Woven Fabric Product</span>
-                      </a>
-                    </div>
-
-                    <div class="col-6 col-md-3">
-                      <a
-                        href="product.html"
-                        title="All Product Page"
-                        class="dropdown-item product-card"
-                      >
-                        <img
-                          src="img/product/all-products.png"
-                          alt="All products page"
-                          class="product-img"
-                          loading="lazy"
-                        />
-                        <span>All Products</span>
-                      </a>
+                        <p class="mt-2 fw-semibold">Product Preview</p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -361,99 +306,85 @@
     <!-- Navbar End -->
 
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 mb-6 wow fadeIn" data-wow-delay="0.1s">
+    <!-- ===== FINAL PREMIUM CAROUSEL ===== -->
+    <div class="container-fluid p-0">
       <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
         <div class="carousel-indicators">
           <button
             type="button"
             data-bs-target="#header-carousel"
             data-bs-slide-to="0"
             class="active"
-            aria-current="true"
-            aria-label="Slide 1"
           ></button>
           <button
             type="button"
             data-bs-target="#header-carousel"
             data-bs-slide-to="1"
-            aria-label="Slide 2"
           ></button>
           <button
             type="button"
             data-bs-target="#header-carousel"
             data-bs-slide-to="2"
-            aria-label="Slide 3"
           ></button>
         </div>
+
         <div class="carousel-inner">
+          <!-- ===== SLIDE 1 (MAIN IMAGE) ===== -->
           <div class="carousel-item active">
-            <video
-              class="w-100"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="none"
-              poster="img/slide1.jpg"
-            >
-              <source src="img/vpt-1.mp4" type="video/mp4" />
+            <!-- SINGLE IMAGE -->
+            <img src="img/head-1.png" class="d-block w-100" alt="Banner" />
+
+            <!-- OVERLAY -->
+            <div class="custom-caption">
+              <div class="container text-center">
+                <h1 class="main-heading">
+                  Packaging Solutions for Global Markets
+                  <span>PP • Non-Woven • Paper</span>
+                </h1>
+                <p class="sub-text">
+                  Engineered for performance, built for global distribution
+                </p>
+
+                <a href="products.html" class="btn-premium">
+                  Explore Products →
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ===== SLIDE 2 (VIDEO) ===== -->
+          <div class="carousel-item">
+            <video class="w-100" autoplay muted loop playsinline>
+              <source src="img/head-2.mp4" type="video/mp4" />
             </video>
 
-            <div class="carousel-caption">
-              <h1
-                class="display-1 text-uppercase text-white mb-4 animated zoomIn"
-              >
-                Premium Poly Packaging Solutions
-              </h1>
-              <a href="contact.html" class="btn btn-primary py-3 px-4"
-                >Get a Quote</a
-              >
+            <div class="carousel-caption custom-caption">
+              <div class="container">
+                <h2 class="main-heading">Advanced Manufacturing Facility</h2>
+
+                <p class="sub-text">
+                  Modern machines, skilled workforce & strict quality control
+                </p>
+
+                <a href="contact.html" class="btn-premium"> Get a Quote → </a>
+              </div>
             </div>
           </div>
+
+          <!-- ===== SLIDE 3 (EXPORT) ===== -->
           <div class="carousel-item">
-            <video
-              class="w-100"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="none"
-              poster="img/slide1.jpg"
-            >
-              <source src="img/vpt-2.mp4" type="video/mp4" />
-            </video>
-            <div class="carousel-caption">
-              <h2
-                class="display-1 text-uppercase text-white mb-4 animated zoomIn"
-              >
-                Reliable Poly Packaging Built for Performance
-              </h2>
-              <a href="contact.html" class="btn btn-primary py-3 px-4"
-                >Get a Quote</a
-              >
-            </div>
-          </div>
-          <div class="carousel-item">
-            <video
-              class="w-100"
-              autoplay
-              muted
-              loop
-              playsinline
-              preload="none"
-              poster="img/slide1.jpg"
-            >
-              <source src="img/vpt-3.mp4" type="video/mp4" />
-            </video>
-            <div class="carousel-caption">
-              <h2
-                class="display-1 text-uppercase text-white mb-4 animated zoomIn"
-              >
-                Advanced Poly Packaging for Global Industries
-              </h2>
-              <a href="contact.html" class="btn btn-primary py-3 px-4"
-                >Get a Quote</a
-              >
+            <img src="img/head-3.png" class="w-100" />
+
+            <div class="carousel-caption custom-caption">
+              <div class="container">
+                <h2 class="main-heading">Exporting Worldwide</h2>
+
+                <p class="sub-text">
+                  Trusted by global clients with timely delivery & bulk supply
+                </p>
+
+                <a href="contact.html" class="btn-premium"> Contact Us → </a>
+              </div>
             </div>
           </div>
         </div>
@@ -477,27 +408,41 @@
 
           <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
             <h1 class="display-6 text-uppercase mb-4">
-              Leading Manufacturer of Poly Packaging Products
+              Globally Trusted Manufacturer of High-Performance Industrial
+              Packaging
             </h1>
 
             <p>
-              AS Exports is a trusted manufacturer of high-quality poly
-              packaging products including LDPE bags, HM rolls, garbage bags,
-              and stretch films. With advanced manufacturing facilities and
-              skilled professionals, we deliver durable and reliable packaging
-              solutions for industrial, commercial, and export markets.
+              AS Exports is a leading manufacturer delivering
+              <strong>precision-engineered packaging systems</strong> designed
+              for durability, safety, and long-term performance. Our production
+              is driven by
+              <strong
+                >advanced technology, precision processes, and strict quality
+                control</strong
+              >
+              to meet modern industry standards.
             </p>
 
             <p>
-              We are also a leading
-              <strong
-                >PP woven bags manufacturer, FIBC jumbo bags supplier, HDPE
-                tarpaulin manufacturer, and industrial poly packaging products
-                exporter</strong
-              >
-              serving global industries with reliable packaging solutions.
+              Our product range includes
+              <strong>
+                PP/HDPE woven sack bags, BOPP laminated bags, FIBC (jumbo) bags,
+                leno mesh bags, HDPE tarpaulin, and dunnage bags </strong
+              >, serving applications across agriculture, logistics,
+              construction, and industrial sectors.
             </p>
 
+            <p>
+              With a strong international presence, we are known as a
+              <strong>dependable export partner</strong>, delivering solutions
+              that ensure
+              <strong
+                >optimized storage, streamlined handling, and secure
+                transit</strong
+              >
+              across global supply chains.
+            </p>
             <div class="row g-5 mb-4">
               <div class="col-6 col-sm-6">
                 <div class="d-flex align-items-center">
@@ -565,10 +510,10 @@
               </div>
               <div class="feature-content">
                 <h5 class="text-uppercase mb-3">High Quality Materials</h5>
+                <p></p>
                 <p>
-                  We use premium grade raw materials to manufacture durable and
-                  reliable poly packaging products that ensure maximum
-                  protection and long-lasting performance.
+                  Carefully sourced materials ensure strength, consistency, and
+                  long-lasting performance in demanding environments.
                 </p>
                 <a
                   class="position-relative text-body text-uppercase small d-flex justify-content-between"
@@ -590,9 +535,8 @@
               <div class="feature-content">
                 <h5 class="text-uppercase">Advanced Machinery</h5>
                 <p>
-                  Our production facility is equipped with modern machinery and
-                  technology that allows us to manufacture packaging products
-                  with precision, efficiency, and consistent quality.
+                  State-of-the-art equipment enables precision production and
+                  efficient output at every stage.
                 </p>
                 <a
                   class="position-relative text-body text-uppercase small d-flex justify-content-between"
@@ -614,9 +558,8 @@
               <div class="feature-content">
                 <h5 class="text-uppercase">Custom Packaging Solutions</h5>
                 <p>
-                  We offer customized packaging solutions tailored to meet the
-                  specific needs of different industries, ensuring the right
-                  size, thickness, and strength for every application.
+                  Flexible configurations tailored to specific load, size, and
+                  application requirements across industries.
                 </p>
                 <a
                   class="position-relative text-body text-uppercase small d-flex justify-content-between"
@@ -638,9 +581,8 @@
               <div class="feature-content">
                 <h5 class="text-uppercase">Export Quality Standards</h5>
                 <p>
-                  Our products are manufactured following strict quality
-                  standards, making them suitable for both domestic and
-                  international markets.
+                  Manufactured to meet international benchmarks for seamless
+                  global distribution.
                 </p>
                 <a
                   class="position-relative text-body text-uppercase small d-flex justify-content-between"
@@ -685,10 +627,9 @@
               </h1>
 
               <p class="text-light mb-4 wow fadeIn" data-wow-delay="0.4s">
-                We provide high-quality poly packaging materials designed for
-                strength, durability, and reliable protection. Our products are
-                widely used in industries for safe packaging, storage, and
-                transportation.
+                Built for demanding applications, our products deliver
+                consistent performance across storage, transport, and handling
+                operations worldwide.
               </p>
 
               <!-- Counters -->
@@ -776,10 +717,9 @@
               <div class="home-product-content">
                 <h5>PP / HDPE Woven Sack Bags</h5>
                 <p>
-                  Strong and durable woven sacks used for packaging agricultural
-                  products, chemicals, fertilizers, and food grains.
+                  Durable woven sacks suitable for agricultural, chemical, and
+                  bulk storage applications.
                 </p>
-
                 <a
                   href="pp-hdpe-woven-sack-bag.html"
                   class="btn btn-primary btn-sm"
@@ -802,8 +742,8 @@
               <div class="home-product-content">
                 <h5>BOPP Laminated Bags</h5>
                 <p>
-                  High quality printed BOPP laminated bags used for food
-                  packaging, rice, flour, sugar, and consumer products.
+                  Laminated bags with high-quality printing, ideal for retail
+                  and food-grade packaging.
                 </p>
 
                 <a href="BOPP_bags.html" class="btn btn-primary btn-sm">
@@ -825,8 +765,8 @@
               <div class="home-product-content">
                 <h5>FIBC / Jumbo Bags</h5>
                 <p>
-                  Large capacity bulk bags designed for storing and transporting
-                  powders, granules, and industrial materials.
+                  Bulk handling solutions designed for transporting powders and
+                  heavy materials safely.
                 </p>
 
                 <a href="fibc.html" class="btn btn-primary btn-sm">
@@ -848,8 +788,8 @@
               <div class="home-product-content">
                 <h5>Leno / Mesh Bags</h5>
                 <p>
-                  Lightweight mesh bags widely used for packaging vegetables,
-                  fruits, onions, and agricultural products.
+                  Breathable mesh bags commonly used for fruits, vegetables, and
+                  fresh produce.
                 </p>
 
                 <a href="leno-mesh-bag.html" class="btn btn-primary btn-sm">
@@ -877,7 +817,10 @@
             <div class="process-box">
               <i class="fas fa-industry"></i>
               <h5>01 Raw Material Selection</h5>
-              <p>Premium grade polymer materials used for durability.</p>
+              <p>
+                High-grade materials are selected to ensure product strength and
+                durability.
+              </p>
             </div>
           </div>
 
@@ -885,7 +828,9 @@
             <div class="process-box">
               <i class="fas fa-cogs"></i>
               <h5>02 Production</h5>
-              <p>Advanced extrusion and sealing machinery.</p>
+              <p>
+                Modern production techniques ensure accuracy and efficiency.
+              </p>
             </div>
           </div>
 
@@ -893,7 +838,7 @@
             <div class="process-box">
               <i class="fas fa-check-circle"></i>
               <h5>03 Quality Testing</h5>
-              <p>Strict quality inspection before packaging.</p>
+              <p>Each batch undergoes strict inspection before dispatch.</p>
             </div>
           </div>
 
@@ -901,14 +846,14 @@
             <div class="process-box">
               <i class="fas fa-truck"></i>
               <h5>04 Global Delivery</h5>
-              <p>Fast and safe shipping across India and abroad.</p>
+              <p>Reliable logistics ensure timely delivery across markets.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- Manufacturing Process End -->
+
     <!-- Statistics Start -->
     <section class="stats-section py-6 text-center">
       <div class="container">
@@ -1265,6 +1210,17 @@
           }
         ]
       }
+    </script>
+    <script>
+      const items = document.querySelectorAll(".preview-item");
+      const preview = document.getElementById("previewImage");
+
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          const img = item.getAttribute("data-img");
+          preview.src = img;
+        });
+      });
     </script>
   </body>
 </html>
