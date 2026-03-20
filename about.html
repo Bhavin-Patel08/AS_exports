@@ -198,14 +198,104 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.c
               <a href="index.html" class="nav-item nav-link">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
 
-              <!-- Products Mega Dropdown -->
-              <div class="nav-item dropdown mega-dropdown">
+              <!-- PRODUCTS DROPDOWN -->
+              <div class="nav-item dropdown position-static">
                 <a
                   href="#"
                   class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                   >Products</a
                 >
+                  Products
+                </a>
+
+                <div class="dropdown-menu mega-dropdown p-4 border-0 shadow-lg">
+                  <div class="row">
+                    <!-- LEFT SIDE (ALL LINKS) -->
+                    <div class="col-md-8">
+                      <div class="row">
+                        <!-- PP PRODUCTS -->
+                        <div class="col-md-4 border-end">
+                          <h5>PP Products</h5>
+
+                          <a
+                            href="pp-sack-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/pp-hdpe-woven-sack-bags.png"
+                          >
+                            PP Sack Bags
+                          </a>
+
+                          <a
+                            href="bopp-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/bopp-bag.png"
+                          >
+                            BOPP Bags
+                          </a>
+
+                          <a
+                            href="fibc-jumbo.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/fibc.png"
+                          >
+                            FIBC Jumbo Bags
+                          </a>
+                        </div>
+
+                        <!-- NON-WOVEN -->
+                        <div class="col-md-4 border-end">
+                          <h5>Non-Woven</h5>
+
+                          <a
+                            href="nonwoven-fabric.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/nonwoven.png"
+                          >
+                            Non-Woven Fabric
+                          </a>
+
+                          <a
+                            href="nonwoven-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/nonwoven-bag.png"
+                          >
+                            Non-Woven Bags
+                          </a>
+                        </div>
+
+                        <!-- PAPER -->
+                        <div class="col-md-4">
+                          <h5>Paper</h5>
+
+                          <a
+                            href="paper-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/paper-bag.png"
+                          >
+                            Paper Bags
+                          </a>
+
+                          <a
+                            href="kraft-paper-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/kraft-bag.png"
+                          >
+                            Kraft Paper Bags
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- RIGHT SIDE (IMAGE PREVIEW) -->
+                    <div
+                      class="col-md-4 d-none d-lg-flex align-items-center justify-content-center"
+                    >
+                      <div class="preview-box text-center">
+                        <img
+                          id="previewImage"
+                          src="img/product/pp-hdpe-woven-sack-bags.png"
+                          class="img-fluid"
                 <div class="dropdown-menu mega-menu">
                   <div class="row g-3">
                     <!-- g-3 for spacing -->
@@ -330,8 +420,8 @@ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.c
                           class="product-img"
                           loading="lazy"
                         />
-                        <span>All Products</span>
-                      </a>
+                        <p class="mt-2 fw-semibold">Product Preview</p>
+                      </div>
                     </div>
                   </div>
                 </div>
