@@ -57,6 +57,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
@@ -170,23 +174,31 @@
     >
       <div class="container">
         <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-          <a href="index.html" class="navbar-brand d-lg-none">
-            <h1 class="fw-bold m-0">AS EXPORTS</h1>
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="navbar-brand d-lg-none d-flex align-items-center gap-2"
+          >
+            <img src="img/logo4.png" class="mobile-logo" />
+            <span class="brand-text">AS EXPORTS</span>
           </a>
+
+          <!-- Toggle -->
           <button
+            class="navbar-toggler"
             type="button"
-            class="navbar-toggler me-0"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileSidebar"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
-              <a href="index.html" class="nav-item nav-link">Home</a>
-              <a href="about.html" class="nav-item nav-link active">About</a>
+              <a href="index.html" class="nav-item nav-link active">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
 
-              <!-- PRODUCTS DROPDOWN -->
+              <!-- PRODUCTS -->
               <div class="nav-item dropdown position-static">
                 <a
                   href="#"
@@ -195,88 +207,352 @@
                 >
                   Products
                 </a>
-
                 <div class="dropdown-menu mega-dropdown p-4 border-0 shadow-lg">
-                  <div class="row">
-                    <!-- LEFT SIDE (ALL LINKS) -->
+                  <!-- ================= MOBILE MENU ================= -->
+
+                  <!-- ================= DESKTOP MEGA MENU ================= -->
+                  <div class="row d-none d-lg-flex">
+                    <!-- LEFT SIDE -->
                     <div class="col-md-8">
                       <div class="row">
                         <!-- PP PRODUCTS -->
                         <div class="col-md-4 border-end">
-                          <h5>PP Products</h5>
+                          <h5 class="menu-title">
+                            <a href="pp-product.html" class="menu-link"
+                              >PP Products</a
+                            >
+                          </h5>
 
                           <a
-                            href="pp-sack-bags.html"
+                            href="pp-hdpe-woven-sack-bag.html"
                             class="dropdown-item preview-item"
                             data-img="img/product/pp-hdpe-woven-sack-bags.png"
+                            data-name="PP Sack Bags"
+                            data-category="PP Products"
+                            data-link="pp-hdpe-woven-sack-bag.html"
+                            >PP Sack Bags</a
                           >
-                            PP Sack Bags
-                          </a>
 
                           <a
-                            href="bopp-bags.html"
+                            href="Bopp_bags.html"
                             class="dropdown-item preview-item"
                             data-img="img/product/bopp-bag.png"
+                            data-name="BOPP Bags"
+                            data-category="PP Products"
+                            data-link="Bopp_bags.html"
+                            >BOPP Bags</a
                           >
-                            BOPP Bags
+
+                          <a
+                            href="fibc.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/fibc.png"
+                            data-name="FIBC Jumbo Bags"
+                            data-category="PP Products"
+                            data-link="fibc.html"
+                            >FIBC Jumbo Bags</a
+                          >
+
+                          <a
+                            href="sling.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/Sling_bag.png"
+                            data-name="Sling Bags"
+                            data-category="PP Products"
+                            data-link="sling.html"
+                            >Sling Bags</a
+                          >
+
+                          <a
+                            href="dunnage-bag.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/inflatable-dunnage-bag.png"
+                            data-name="Dunnage Bags"
+                            data-category="PP Products"
+                            data-link="dunnage-bag.html"
+                            >Dunnage Bags</a
+                          >
+
+                          <a
+                            href="tarpaulin.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/tarpaulin-fabric.png"
+                            data-name="Tarpaulin"
+                            data-category="PP Products"
+                            data-link="tarpaulin.html"
+                            >Tarpaulin</a
+                          >
+
+                          <a
+                            href="pp-hdpe-woven-fabric-products.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/woven-fabric-sheets.png"
+                            data-name="PP / HDPE Woven Fabric"
+                            data-category="PP Products"
+                            data-link="pp-hdpe-woven-fabric-products.html"
+                          >
+                            PP / HDPE Woven Fabric
                           </a>
 
                           <a
-                            href="fibc-jumbo.html"
+                            href="leno-mesh-bag.html"
                             class="dropdown-item preview-item"
-                            data-img="img/product/fibc.png"
+                            data-img="img/product/leno_mesh_bag.png"
+                            data-name="Leno Mesh Bags"
+                            data-category="PP Products"
+                            data-link="leno-mesh-bag.html"
                           >
-                            FIBC Jumbo Bags
+                            Leno Mesh Bags
                           </a>
                         </div>
 
-                        <!-- NON-WOVEN -->
+                        <!-- NON WOVEN -->
                         <div class="col-md-4 border-end">
-                          <h5>Non-Woven</h5>
+                          <h5 class="menu-title">
+                            <a href="non-woven-product.html" class="menu-link"
+                              >Non-Woven Products</a
+                            >
+                          </h5>
 
                           <a
-                            href="nonwoven-fabric.html"
+                            href="products/non-woven/spunbond-fabric.html"
                             class="dropdown-item preview-item"
-                            data-img="img/product/nonwoven.png"
+                            data-img="img/product/spunbond-fabric-roll.png"
+                            data-name="Spunbond Fabric"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/spunbond-fabric.html"
+                            >Spunbond Fabric</a
                           >
-                            Non-Woven Fabric
-                          </a>
 
                           <a
-                            href="nonwoven-bags.html"
+                            href="products/non-woven/printed-fabric.html"
                             class="dropdown-item preview-item"
-                            data-img="img/product/nonwoven-bag.png"
+                            data-img="img/product/printed-fabric-roll.png"
+                            data-name="Printed Fabric"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/printed-fabric.html"
+                            >Printed Fabric</a
                           >
-                            Non-Woven Bags
-                          </a>
+
+                          <a
+                            href="products/non-woven/surgical-products.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/surgical-product.png"
+                            data-name="Surgical Products"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/surgical-products.html"
+                            >Surgical Products</a
+                          >
+
+                          <a
+                            href="products/non-woven/d-cut-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/D-cut-bag.png"
+                            data-name="D-Cut Bags"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/d-cut-bags.html"
+                            >D-Cut Bags</a
+                          >
+
+                          <a
+                            href="products/non-woven/u-cut-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/U-cut-bag.png"
+                            data-name="U-Cut / W-Cut Bags"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/u-cut-bags.html"
+                            >U-Cut / W-Cut Bags</a
+                          >
+
+                          <a
+                            href="products/non-woven/u-cut-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/U-cut-bag.png"
+                            data-name="Loop Handle Bags"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/u-cut-bags.html"
+                            >Loop Handle Bags</a
+                          >
+
+                          <a
+                            href="products/non-woven/u-cut-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/crop-cover-fabric.png"
+                            data-name="Crop Cover Fabric"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/u-cut-bags.html"
+                            >Crop Cover Fabric</a
+                          >
+
+                          <a
+                            href="products/non-woven/u-cut-bags.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/lamineted-fabric.png"
+                            data-name="Laminated Fabric"
+                            data-category="Non-Woven"
+                            data-link="products/non-woven/u-cut-bags.html"
+                            >Laminated Fabric</a
+                          >
                         </div>
 
                         <!-- PAPER -->
                         <div class="col-md-4">
-                          <h5>Paper</h5>
+                          <h5 class="menu-title">
+                            <a href="paper-box-product.html" class="menu-link"
+                              >Paper Boxes</a
+                            >
+                          </h5>
 
+                          <!-- Corrugated Boxes -->
                           <a
-                            href="paper-bags.html"
+                            href="corrugated-boxes.html"
                             class="dropdown-item preview-item"
-                            data-img="img/product/paper-bag.png"
+                            data-img="img/product/corrugated-box.png"
+                            data-name="Corrugated Boxes"
+                            data-category="Paper"
+                            data-link="corrugated-boxes.html"
                           >
-                            Paper Bags
+                            Corrugated Boxes
                           </a>
 
+                          <!-- Carton Boxes -->
                           <a
-                            href="kraft-paper-bags.html"
+                            href="carton-boxes.html"
                             class="dropdown-item preview-item"
-                            data-img="img/product/kraft-bag.png"
+                            data-img="img/product/carton-box.png"
+                            data-name="Carton Boxes"
+                            data-category="Paper"
+                            data-link="carton-boxes.html"
                           >
-                            Kraft Paper Bags
+                            Carton Boxes
+                          </a>
+
+                          <!-- Printed Corrugated Boxes -->
+                          <a
+                            href="printed-corrugated-boxes.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/printed-box.png"
+                            data-name="Printed Boxes"
+                            data-category="Paper"
+                            data-link="printed-boxes.html"
+                          >
+                            Printed Boxes
+                          </a>
+
+                          <!-- Fruit Boxes -->
+                          <a
+                            href="fruit-boxes.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/fruit-box.png"
+                            data-name="Fruit Boxes"
+                            data-category="Paper"
+                            data-link="fruit-boxes.html"
+                          >
+                            Fruit Boxes
+                          </a>
+
+                          <!-- Sweet Boxes -->
+                          <a
+                            href="sweet-boxes.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/sweet-box.png"
+                            data-name="Sweet Boxes"
+                            data-category="Paper"
+                            data-link="sweet-boxes.html"
+                          >
+                            Sweet Boxes
+                          </a>
+
+                          <!-- Corrugated Rolls -->
+                          <a
+                            href="corrugated-rolls.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/corrugated-roll.png"
+                            data-name="Corrugated Rolls"
+                            data-category="Paper"
+                            data-link="corrugated-rolls.html"
+                          >
+                            Corrugated Rolls
+                          </a>
+
+                          <!-- Carton Packing Sheets -->
+                          <a
+                            href="carton-packing-sheets.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/carton-sheet.png"
+                            data-name="Carton Packing Sheets"
+                            data-category="Paper"
+                            data-link="carton-packing-sheets.html"
+                          >
+                            Carton Packing Sheets
+                          </a>
+
+                          <!-- Food Packing Sheets -->
+                          <a
+                            href="food-packing-sheets.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/food-sheet.png"
+                            data-name="Food Packing Sheets"
+                            data-category="Paper"
+                            data-link="food-packing-sheets.html"
+                          >
+                            Food Packing Sheets
+                          </a>
+
+                          <!-- Die Cut Boxes -->
+                          <a
+                            href="die-cut-boxes.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/die-cut-box.png"
+                            data-name="Die Cut Boxes"
+                            data-category="Paper"
+                            data-link="die-cut-boxes.html"
+                          >
+                            Die Cut Boxes
+                          </a>
+
+                          <!-- Mono Carton Boxes -->
+                          <a
+                            href="mono-carton-boxes.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/mono-carton.png"
+                            data-name="Mono Carton Boxes"
+                            data-category="Paper"
+                            data-link="mono-carton-boxes.html"
+                          >
+                            Mono Carton Boxes
+                          </a>
+
+                          <!-- Heavy Duty Boxes -->
+                          <a
+                            href="heavy-duty-boxes.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/heavy-box.png"
+                            data-name="Heavy Duty Boxes"
+                            data-category="Paper"
+                            data-link="heavy-duty-boxes.html"
+                          >
+                            Heavy Duty Boxes
+                          </a>
+
+                          <!-- Duplex Boxes -->
+                          <a
+                            href="duplex-boxes.html"
+                            class="dropdown-item preview-item"
+                            data-img="img/product/duplex-box.png"
+                            data-name="Duplex Boxes"
+                            data-category="Paper"
+                            data-link="duplex-boxes.html"
+                          >
+                            Duplex Boxes
                           </a>
                         </div>
                       </div>
                     </div>
 
-                    <!-- RIGHT SIDE (IMAGE PREVIEW) -->
+                    <!-- RIGHT IMAGE -->
                     <div
-                      class="col-md-4 d-none d-lg-flex align-items-center justify-content-center"
+                      class="col-md-4 d-flex align-items-center justify-content-center"
                     >
                       <div class="preview-box text-center">
                         <img
@@ -284,7 +560,16 @@
                           src="img/product/pp-hdpe-woven-sack-bags.png"
                           class="img-fluid"
                         />
-                        <p class="mt-2 fw-semibold">Product Preview</p>
+
+                        <p id="previewCategory" class="preview-category">
+                          PP Products
+                        </p>
+
+                        <h6 id="previewText">PP Sack Bags</h6>
+
+                        <a id="previewBtn" href="#" class="preview-btn">
+                          View Product →
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -294,6 +579,7 @@
               <a href="gallery.html" class="nav-item nav-link">Gallery</a>
               <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
+
             <div class="ms-auto d-none d-lg-block">
               <a href="contact.html" class="btn btn-primary py-2 px-3"
                 >Get A Quote</a
@@ -304,6 +590,111 @@
       </div>
     </div>
     <!-- Navbar End -->
+    <!-- PREMIUM MOBILE SIDEBAR -->
+    <div class="offcanvas offcanvas-start premium-sidebar" id="mobileSidebar">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">AS EXPORTS</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <a href="index.html" class="sidebar-link">
+          <i class="bi bi-house"></i> Home
+        </a>
+
+        <a href="about.html" class="sidebar-link">
+          <i class="bi bi-info-circle"></i> About
+        </a>
+
+        <!-- PRODUCTS -->
+        <div class="sidebar-item">
+          <!-- LEVEL 1 -->
+          <div class="sidebar-header level-1">
+            <span><i class="bi bi-box"></i> Products</span>
+            <span class="arrow"></span>
+          </div>
+
+          <div class="sidebar-submenu level-1-menu">
+            <!-- PP CATEGORY -->
+            <div class="submenu-item">
+              <div class="submenu-header level-2">
+                <a href="pp-product.html">PP Product</a>
+                <span class="arrow"></span>
+              </div>
+
+              <!-- ✅ ADD level-3-menu -->
+              <div class="level-3-menu">
+                <a href="pp-hdpe-woven-sack-bag.html">PP Sack Bags</a>
+                <a href="Bopp_bags.html">BOPP Bags</a>
+                <a href="fibc.html">FIBC Jumbo Bags</a>
+                <a href="sling.html">Sling Bags</a>
+                <a href="dunnage-bag.html">Dunnage Bags</a>
+                <a href="tarpaulin.html">Tarpaulin</a>
+                <a href="pp-hdpe-woven-fabric-products.html"> PP / HDPE Woven Fabric</a>
+                <a href="leno-mesh-bag.html"> Leno Mesh Bags</a>
+              </div>
+            </div>
+
+            <!-- NON WOVEN -->
+            <div class="submenu-item">
+              <div class="submenu-header level-2">
+                <a href="non-woven-product.html">Non-Woven Products</a>
+                <span class="arrow"></span>
+              </div>
+
+              <div class="level-3-menu">
+                <a href="#">Spunbond Fabric</a>
+                <a href="#">Printed Fabric</a>
+                <a href="#">Surgical Products</a>
+                <a href="#">D-Cut Bags</a>
+                <a href="#">U-Cut / W-Cut Bags</a>
+                <a href="#">Loop Handle Bags</a>
+                <a href="#">Crop Cover Fabric</a>
+                <a href="#">Laminated Fabric</a>
+              </div>
+            </div>
+
+            <!-- PAPER -->
+            <div class="submenu-item">
+              <div class="submenu-header level-2">
+                <a href="paper-box-product.html">Paper Boxes</a>
+                <span class="arrow"></span>
+              </div>
+
+              <div class="level-3-menu">
+                <!-- Paper Packaging Products -->
+
+                <a href="corrugated-boxes.html">Corrugated Boxes</a>
+                <a href="carton-boxes.html">Carton Boxes</a>
+                <a href="printed-boxes.html">Printed Boxes</a>
+                <a href="fruit-boxes.html">Fruit Boxes</a>
+                <a href="sweet-boxes.html">Sweet Boxes</a>
+                <a href="corrugated-rolls.html">Corrugated Rolls</a>
+                <a href="carton-packing-sheets.html">Carton Packing Sheets</a>
+                <a href="food-packing-sheets.html">Food Packing Sheets</a>
+                <a href="die-cut-boxes.html">Die Cut Boxes</a>
+                <a href="mono-carton-boxes.html">Mono Carton Boxes</a>
+                <a href="heavy-duty-boxes.html">Heavy Duty Boxes</a>
+                <a href="duplex-boxes.html">Duplex Boxes</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a href="gallery.html" class="sidebar-link">
+          <i class="bi bi-images"></i> Gallery
+        </a>
+
+        <a href="contact.html" class="sidebar-link">
+          <i class="bi bi-envelope"></i> Contact
+        </a>
+      </div>
+    </div>
+    <!-- PREMIUM MOBILE SIDEBAR -->
 
     <!-- Carousel Start -->
     <!-- ===== FINAL PREMIUM CAROUSEL ===== -->
@@ -1028,10 +1419,10 @@
 
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="product.html">All Products</a></li>
-            <li><a href="pp-hdpe-woven-sack-bag.html">PP Woven Bags</a></li>
-            <li><a href="fibc.html">FIBC Jumbo Bags</a></li>
-            <li><a href="tarpaulin.html">HDPE Tarpaulin</a></li>
+            <li><a href="pp-product.html">PP Products</a></li>
+            <li><a href="non-woven-product.html">Non-Woven Products</a></li>
+            <li><a href="paper-box-product.html">Paper Boxes</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
@@ -1210,17 +1601,6 @@
           }
         ]
       }
-    </script>
-    <script>
-      const items = document.querySelectorAll(".preview-item");
-      const preview = document.getElementById("previewImage");
-
-      items.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-          const img = item.getAttribute("data-img");
-          preview.src = img;
-        });
-      });
     </script>
   </body>
 </html>
