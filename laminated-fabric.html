@@ -274,7 +274,7 @@
 
         <!-- Page Header End -->
 
-       
+
         <!-- Product Hero -->
         <section class="product-hero py-5">
             <div class="container">
@@ -943,11 +943,14 @@
             tabs.forEach((tab) => {
                 tab.addEventListener("click", function () {
                     tabs.forEach((btn) => btn.classList.remove("active"));
-                    this.classList.add("active");
+                    this.classList.add("active")
 
-                    contents.forEach((content) => content.classList.remove("active"));
+                    contents.forEach((content) => {
+                        content.style.display = "none";
+                    });
 
-                    document.getElementById(this.dataset.tab).classList.add("active");
+                    document.getElementById(this.dataset.target).style.display = "block";
+
                 });
             });
         </script>
@@ -1017,37 +1020,45 @@
       </script>
 
         <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "What are BOPP laminated woven bags used for?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "BOPP laminated woven bags are widely used for packaging fertilizers, grains, animal feed, seeds and other industrial bulk materials."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What are the benefits of BOPP laminated bags?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "BOPP laminated bags offer excellent print quality, moisture resistance, durability and high strength for heavy duty packaging."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Can BOPP laminated PP woven bags be customized?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Yes, AS Exports offers custom sizes, multi-color printing, lamination options and branding for BOPP laminated PP woven bags."
-              }
-            }
-          ]
-        }
-      </script>
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "What is laminated non woven fabric used for?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Laminated non woven fabric is widely used for shopping bags, packaging, medical applications, promotional bags and moisture resistant industrial uses."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "What are the benefits of laminated non woven fabric?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Laminated non woven fabric provides water resistance, improved strength, better print quality, durability and long reusable life."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can laminated non woven fabric be customized?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, AS Exports manufactures laminated non woven fabric in different GSM, colors, widths, roll sizes and printing options based on customer requirements."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is laminated non woven fabric waterproof?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, lamination provides moisture and water resistance making it suitable for packaging and reusable bag manufacturing."
+   }
+  }
+ ]
+}
+</script>
         <script type="application/ld+json">
         {
           "@context": "https://schema.org",
