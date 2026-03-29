@@ -5,26 +5,18 @@
        PAGE LOADING SPINNER
     ========================= */
     // Hide the loading spinner once the page is ready
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
+   var spinner = function () {
+    window.addEventListener("load", function () {
+        var spinner = document.getElementById("spinner");
+        if (spinner) {
+            spinner.classList.remove("show");
+        }
+    });
+};
+spinner(); 
 
 
-    /* =========================
-       WOW ANIMATION INIT
-    ========================= */
-    // Initialize scroll animations if WOW.js exists
-    if (typeof WOW === "function") {
-        new WOW().init();
-    }
-
-
-    /* =========================
+      /* =========================
        STICKY NAVBAR
     ========================= */
     // Show navbar after scrolling 300px
@@ -163,23 +155,43 @@
    FAQ ACCORDION
 ========================= */
 // Toggle FAQ items
-document.querySelectorAll(".faq-question").forEach(button => {
+document.addEventListener("DOMContentLoaded", () => {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach(item => {
+    const button = item.querySelector(".faq-question");
 
     button.addEventListener("click", () => {
 
-        const active = document.querySelector(".faq-item.active");
-
-        // Close other open FAQ
-        if (active && active !== button.parentElement) {
-            active.classList.remove("active");
+      // Close other items
+      faqItems.forEach(other => {
+        if (other !== item) {
+          other.classList.remove("active");
         }
+      });
 
-        // Toggle clicked FAQ
-        button.parentElement.classList.toggle("active");
-
+      // Toggle current item
+      item.classList.toggle("active");
     });
-
+  });
 });
+
+new WOW({
+  offset: 80,
+  mobile: false,
+  live: false
+}).init();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate");
+    }
+  });
+});
+
+document.querySelectorAll(".animate-on-scroll")
+.forEach(el => observer.observe(el));
 
 
 const backToTop = document.getElementById("backToTop");
