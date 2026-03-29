@@ -688,12 +688,16 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    /* Optional Parallax (disable on mobile later) */
     background-attachment: fixed;
-    /* Parallax effect */
-    padding: 110px 0;
+
+    padding: 140px 0;
+    /* increased for better spacing */
+    overflow: hidden;
 }
 
-/* Overlay */
+/* 🔥 Gradient Overlay (Better than plain black) */
 
 .page-header::before {
     content: "";
@@ -702,7 +706,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.45);
+
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.35));
 }
 
 /* Content */
@@ -717,6 +724,8 @@ body {
 .page-header h1 {
     letter-spacing: 2px;
     font-weight: 700;
+    font-size: 48px;
+    color: #fff;
     animation: fadeDown 1.2s ease;
 }
 
@@ -724,7 +733,8 @@ body {
 
 .page-header .subtitle {
     font-size: 18px;
-    opacity: 0.9;
+    opacity: 0.95;
+    color: #ddd;
     animation: fadeUp 1.5s ease;
 }
 
@@ -739,26 +749,107 @@ body {
     margin: 15px auto 0;
 }
 
-/* Breadcrumb */
+/* 🔥 Smooth text shadow (very important) */
 
-.page-header .breadcrumb {
-    background: transparent;
-    font-size: 14px;
-    letter-spacing: 1px;
+.page-header h1,
+.page-header .subtitle {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.page-header .breadcrumb a {
-    color: #fff;
-    opacity: 0.9;
+/* 📱 Mobile Fix (IMPORTANT) */
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 90px 0;
+        background-attachment: scroll;
+        /* fix lag on mobile */
+    }
+
+    .page-header h1 {
+        font-size: 32px;
+    }
 }
 
-.page-header .breadcrumb a:hover {
+/* Breadcrumb Links Color */
+
+.paper-header .breadcrumb a {
     color: #ff7a00;
-
+    /* ORANGE */
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-.page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: #fff;
+/* Hover Effect */
+
+.paper-header .breadcrumb a:hover {
+    color: #ffffff;
+}
+
+/* Active Page (Sweet Boxes / Paper Boxes) */
+
+.paper-header .breadcrumb-item.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Separator color */
+
+.paper-header .breadcrumb-item+.breadcrumb-item::before {
+    color: #ffffff;
+}
+
+/* PAPER HEADER SECTION */
+
+.paper-header {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background Image */
+
+.paper-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Overlay */
+
+.paper-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Content */
+
+.paper-header-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Title underline */
+
+.paper-header h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff7a00;
+    margin: 15px auto 0;
 }
 
 /* Breadcrumb Links Color */
@@ -968,14 +1059,15 @@ body {
     justify-content: center;
     gap: 8px;
 }
+
 .carousel-item::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(11,44,95,0.5);
-  top: 0;
-  left: 0;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 44, 95, 0.5);
+    top: 0;
+    left: 0;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -2106,11 +2198,11 @@ body {
     border-radius: 50px;
     padding: 2px;
     background: linear-gradient(135deg, #0f2f5f, #ff7a00);
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
-            mask-composite: exclude;
+    mask-composite: exclude;
     z-index: -1;
 }
 
@@ -2142,7 +2234,7 @@ body {
 /* Active Click Effect */
 .btn-outline-primary:active {
     transform: scale(0.97);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Focus */
@@ -2150,6 +2242,7 @@ body {
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 122, 0, 0.3);
 }
+
 .category-buttons {
     display: flex;
     justify-content: center;
@@ -2645,6 +2738,19 @@ body {
 .cta-btn-outline:hover {
     background: white;
     color: #0b2c5f;
+}
+
+/* WhatsApp button hover (no HTML change) */
+.cta-btn-outline:hover {
+    background: #25D366 !important;
+    color: white !important;
+    border-color: #25D366 !important;
+    transform: translateY(-2px);
+}
+
+/* Optional: WhatsApp icon color fix */
+.cta-btn-outline:hover i {
+    color: white !important;
 }
 
 
@@ -3251,7 +3357,7 @@ body {
     font-size: 14px;
 }
 
-/* HERO SECTION */
+/* ================= HERO SECTION ================= */
 .gallery-hero {
     background: linear-gradient(135deg, #0b2c5f, #0f4aa3);
     color: #fff;
@@ -3272,33 +3378,45 @@ body {
     opacity: .9;
 }
 
-/* GALLERY SECTION */
+/* ================= GALLERY SECTION ================= */
 .gallery-section {
     padding: 90px 0;
     background: #f7f9fc;
 }
 
-/* GALLERY CARD */
+/* ================= GALLERY CARD ================= */
 .gallery-card {
     position: relative;
     overflow: hidden;
     border-radius: 14px;
-    cursor: pointer;
+    cursor: zoom-in;
     background: #fff;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: transform .35s ease, box-shadow .35s ease;
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.6s ease forwards;
+    cursor: zoom-in;
 }
 
-/* IMAGE */
+/* ================= IMAGE ================= */
 .gallery-card img {
     width: 100%;
-    height: 270px;
+    aspect-ratio: 4/3;
+    /* responsive fix */
     object-fit: cover;
     transition: transform .5s ease;
     will-change: transform;
+}.gallery-overlay i {
+    transition: transform 0.3s ease;
+}.gallery-card:hover .gallery-overlay i {
+    transform: scale(1.2);
 }
 
-/* SHINE EFFECT */
+/* ================= SHINE EFFECT ================= */
 .gallery-card::before {
     content: "";
     position: absolute;
@@ -3315,8 +3433,7 @@ body {
     z-index: 2;
 }
 
-
-/* OVERLAY */
+/* ================= OVERLAY ================= */
 .gallery-overlay {
     position: absolute;
     inset: 0;
@@ -3339,11 +3456,10 @@ body {
     border-radius: 50%;
 }
 
-
-/* HOVER EFFECT */
+/* ================= HOVER EFFECT ================= */
 .gallery-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
 .gallery-card:hover img {
@@ -3358,6 +3474,15 @@ body {
     left: 130%;
 }
 
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= PERFORMANCE ================= */
 .catalog-card img,
 .gallery-card img,
 .factory-img img {
@@ -3378,6 +3503,15 @@ GLOBAL RESPONSIVE FIX
         font-size: 50px;
     }
 
+}
+@media (max-width: 576px) {
+    .gallery-card img {
+        height: 200px;
+    }
+
+    .gallery-hero h1 {
+        font-size: 28px;
+    }
 }
 
 /* ======================================================
@@ -3569,113 +3703,149 @@ SMALL MOBILE
     text-decoration: underline;
 }
 
-/* CONTACT FORM */
-
+/* ===== CONTACT SECTION ===== */
 .contact-form-section {
-    padding: 80px 0;
-    background: #ffffff;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f6f9fc, #eef3f8);
 }
 
+/* ===== FORM BOX ===== */
 .form-box {
-    background: #ffffff;
-    padding: 45px;
-    border-radius: 12px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
+    transition: 0.3s ease;
 }
 
-/* subtle background shape */
-.form-box::before {
-    content: "";
-    position: absolute;
-    top: -80px;
-    right: -80px;
-    width: 200px;
-    height: 200px;
-    background: rgba(15, 47, 95, 0.05);
-    border-radius: 50%;
+.form-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
 }
 
+/* Decorative Shapes */
+.form-box::before,
 .form-box::after {
     content: "";
     position: absolute;
-    bottom: -80px;
-    left: -80px;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     background: rgba(15, 47, 95, 0.05);
     border-radius: 50%;
 }
 
+.form-box::before {
+    top: -80px;
+    right: -80px;
+}
+
+.form-box::after {
+    bottom: -80px;
+    left: -80px;
+}
+
+/* ===== HEADINGS ===== */
 .form-box h2 {
     font-weight: 700;
     margin-bottom: 10px;
-    color: #2f5896;
+    color: #0f2f5f;
+    font-size: 28px;
 }
 
 .form-box p {
-    color: #777;
+    color: #6c757d;
     margin-bottom: 30px;
+    font-size: 15px;
 }
 
+/* ===== INPUT FIELDS ===== */
 .form-box input,
 .form-box select,
 .form-box textarea {
     width: 100%;
-    padding: 14px 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    padding: 15px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
     margin-bottom: 18px;
     font-size: 14px;
-    transition: .3s;
-    font-family: inherit;
+    background: #fff;
+    transition: all 0.25s ease;
 }
 
+/* Focus Effect */
 .form-box input:focus,
 .form-box textarea:focus,
 .form-box select:focus {
     border-color: #0f2f5f;
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(15, 47, 95, 0.08);
+    box-shadow: 0 0 0 3px rgba(15, 47, 95, 0.08);
+    transform: scale(1.01);
 }
 
+/* Placeholder */
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+    color: #aaa;
+}
+
+/* Textarea */
 .form-box textarea {
-    height: 140px;
+    height: 150px;
     resize: none;
 }
 
+/* ===== BUTTONS ===== */
 .form-box button {
-    background: #0f2f5f;
+    background: linear-gradient(135deg, #0f2f5f, #1d4ed8);
     border: none;
     color: white;
-    padding: 14px 35px;
-    border-radius: 8px;
+    padding: 14px 40px;
+    border-radius: 10px;
     font-weight: 600;
-    transition: .3s;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(15, 47, 95, 0.2);
 }
 
+/* Button Hover */
 .form-box button:hover {
-    background: #072147;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(15, 47, 95, 0.3);
 }
 
-
-/* WHATSAPP BUTTON */
-
+/* ===== WHATSAPP BUTTON ===== */
 .whatsapp-btn {
-    background: #25D366;
-    color: white;
+    display: inline-block;
+    margin-left: 15px;
+    background: linear-gradient(135deg, #25D366, #1ebe5d);
+    color: #fff;
     padding: 14px 28px;
-    border-radius: 8px;
-    margin-left: 10px;
-    text-decoration: none;
+    border-radius: 10px;
     font-weight: 600;
-    transition: .3s;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
 }
 
 .whatsapp-btn:hover {
-    background: #1ebe5d;
-    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .form-box {
+        padding: 30px;
+    }
+
+    .form-box button,
+    .whatsapp-btn {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
 }
 
 
