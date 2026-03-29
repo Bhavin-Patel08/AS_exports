@@ -4104,31 +4104,3 @@ SMALL MOBILE
     }
 
 }
-
-.export-strength-section {
-    padding: 80px 0;
-    background: #f8f9fb;
-}
-
-.strength-card {
-    background: #fff;
-    padding: 40px 20px;
-    border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: transform .3s ease, box-shadow .3s ease;
-}
-
-.strength-card:hover {
-    transform: translateY(-6px);
-}
-
-.strength-card i {
-    font-size: 40px;
-    color: #0b2c5f;
-    margin-bottom: 15px;
-}
-
-.strength-card h3 {
-    font-weight: 700;
-    margin-bottom: 5px;
-}
