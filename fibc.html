@@ -1060,6 +1060,19 @@
           });
         });
       });
+      const tabs = document.querySelectorAll(".fab-btn");
+      const contents = document.querySelectorAll(".fab-content");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+          tabs.forEach((btn) => btn.classList.remove("active"));
+          this.classList.add("active");
+
+          contents.forEach((content) => content.classList.remove("active"));
+
+          document.getElementById(this.dataset.tab).classList.add("active");
+        });
+      });
     </script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
