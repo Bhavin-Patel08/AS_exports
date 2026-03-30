@@ -680,24 +680,30 @@ body {
     /* lift effect */
 }
 
-/* HEADER SECTION */
+
+/* ===============================
+   PAGE HEADER WITH BACKGROUND IMAGE
+================================= */
 
 .page-header {
     position: relative;
+
+    /* ✅ Background Image */
     background-image: url("../img/header.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* Optional Parallax (disable on mobile later) */
-    background-attachment: fixed;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 
-    padding: 140px 0;
-    /* increased for better spacing */
     overflow: hidden;
 }
 
-/* 🔥 Gradient Overlay (Better than plain black) */
+/* 🔥 Gradient Overlay */
 
 .page-header::before {
     content: "";
@@ -707,9 +713,13 @@ body {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(to right,
-            rgba(0, 0, 0, 0.65),
-            rgba(0, 0, 0, 0.35));
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.4)
+    );
+
+    z-index: 1;
 }
 
 /* Content */
@@ -717,25 +727,24 @@ body {
 .page-header .container {
     position: relative;
     z-index: 2;
+    color: #fff;
 }
 
 /* Title */
 
 .page-header h1 {
-    letter-spacing: 2px;
-    font-weight: 700;
     font-size: 48px;
-    color: #fff;
-    animation: fadeDown 1.2s ease;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* Subtitle */
 
 .page-header .subtitle {
     font-size: 18px;
-    opacity: 0.95;
     color: #ddd;
-    animation: fadeUp 1.5s ease;
+    margin-top: 10px;
 }
 
 /* Orange underline */
@@ -749,24 +758,48 @@ body {
     margin: 15px auto 0;
 }
 
-/* 🔥 Smooth text shadow (very important) */
+/* ===============================
+   BREADCRUMB STYLING
+================================= */
 
-.page-header h1,
-.page-header .subtitle {
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+.page-header .breadcrumb a {
+    color: #ff7a00;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
-/* 📱 Mobile Fix (IMPORTANT) */
+.page-header .breadcrumb a:hover {
+    color: #ffffff;
+}
+
+.page-header .breadcrumb-item.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.page-header .breadcrumb-item + .breadcrumb-item::before {
+    color: #ffffff;
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================= */
 
 @media (max-width: 768px) {
     .page-header {
-        padding: 90px 0;
+        min-height: 260px;
+        padding: 40px 15px;
+
+        /* ❗ Important: disable parallax on mobile */
         background-attachment: scroll;
-        /* fix lag on mobile */
     }
 
     .page-header h1 {
-        font-size: 32px;
+        font-size: 30px;
+    }
+
+    .page-header .subtitle {
+        font-size: 16px;
     }
 }
 
