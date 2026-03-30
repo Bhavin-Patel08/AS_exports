@@ -143,7 +143,12 @@
                   </small>
 
                   <small class="ms-3">
-                    <i class="fas fa-award me-1"></i> Premium Quality
+                    <i class="fas fa-award me-1"></i> Premium Quality </small
+                  ><small class="ms-3">
+                    <i class="fas fa-certificate me-1"></i> ISO Certified
+                  </small>
+                  <small class="ms-3">
+                    <i class="fas fa-shipping-fast me-1"></i> Worldwide Shipping
                   </small>
                 </div>
               </div>
@@ -1126,10 +1131,17 @@
 
           <p class="moq">Minimum Order Quantity: <span>1×20 FCL</span></p>
 
-          We also manufacture
-          <a href="pp-hdpe-woven-sack-bag.html">HDPE Woven Bags</a>,
-          <a href="fibc.html">FIBC Jumbo Bags</a> and
-          <a href="tarpaulin.html">HDPE Tarpaulin Sheets</a>.
+          <p class="catalog-desc">
+            As a trusted name in the industry, we specialize in manufacturing
+            and exporting a wide range of premium non-woven solutions, including
+            <a href="non-woven-surgical-product.html"
+              >Non-Woven Surgical Products</a
+            >, <a href="laminated-fabric.html">Laminated Non-Woven Fabric</a>,
+            and <a href="u-cut-w-cut-bag.html">U-Cut & W-Cut Non-Woven Bags</a>.
+            Engineered with precision and quality standards, our products cater
+            to healthcare, packaging, and retail sectors, offering reliability,
+            sustainability, and excellent performance for global markets.
+          </p>
         </div>
       </section>
       <!-- Long Description End-->
@@ -1137,7 +1149,9 @@
       <section class="faq-section py-5">
         <div class="container">
           <div class="text-center mb-5">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title">
+              Frequently Asked Questions - D-Cut Bags
+            </h2>
           </div>
 
           <div class="faq-wrapper">
@@ -1201,26 +1215,36 @@
         <div class="cta-overlay"></div>
 
         <div class="container text-center cta-content">
-          <h2>Need D-Cut Non-Woven Bags and Boxes for Your Business?</h2>
+          <h2>Looking for D-Cut Non-Woven Bags & Packaging Boxes?</h2>
+
           <p>
-            Request a quotation for bulk orders of D-Cut non-woven bags and
-            boxes suitable for shopping, gift packaging, promotional branding,
-            and industrial applications. We provide fully customized printing
-            solutions as per your design and specifications. Our team will
-            suggest the best solution according to your requirements and respond
-            within 24 hours.
+            Get a customized quotation for bulk orders of high-quality D-Cut
+            non-woven bags and packaging boxes, ideal for shopping, gift
+            packaging, promotional branding, and retail applications. Our
+            products are designed for strength, reusability, and eco-friendly
+            performance, making them perfect for modern businesses.
           </p>
+
+          <p>
+            We offer complete customization including size, GSM, handle type,
+            and multi-color printing to match your branding needs. Share your
+            requirements with us and our team will provide the best solution
+            with a quick response within 24 hours.
+          </p>
+
           <div class="cta-buttons">
-            <a href="contact.html" class="btn cta-btn-primary"
-              >Request Export Quote</a
-            >
+            <a href="contact.html" class="btn cta-btn-primary">
+              Request Export Quote
+            </a>
 
             <a
-              href="https://wa.me/919714321888?text=Hello%20AS%20Exports,%20I%20need%20a%20quotation%20for%20bulk%20packaging%20products."
+              href="https://wa.me/919714321888?text=Hello%20AS%20Exports,%20I%20need%20a%20quotation%20for%20D-Cut%20Non-Woven%20Bags%20and%20Boxes.%20Please%20share%20details."
               class="btn cta-btn-outline"
-              rel="noopener"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp for D-Cut Non-Woven Bags Inquiry"
             >
-              WhatsApp Us
+              <i class="fab fa-whatsapp"></i> WhatsApp Us
             </a>
           </div>
         </div>
@@ -1485,7 +1509,7 @@
           });
         });
 
-        const tabs = document.querySelectorAll(".fab-btn");
+         const tabs = document.querySelectorAll(".fab-btn");
         const contents = document.querySelectorAll(".fab-content");
 
         tabs.forEach((tab) => {
@@ -1493,12 +1517,9 @@
             tabs.forEach((btn) => btn.classList.remove("active"));
             this.classList.add("active");
 
-            contents.forEach((content) => {
-              content.style.display = "none";
-            });
+            contents.forEach((content) => content.classList.remove("active"));
 
-            document.getElementById(this.dataset.target).style.display =
-              "block";
+            document.getElementById(this.dataset.tab).classList.add("active");
           });
         });
       </script>
