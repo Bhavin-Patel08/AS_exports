@@ -205,20 +205,18 @@ body {
     padding: 10px 18px;
     border-radius: 10px;
 }
-
-/* Logo bigger */
+/* Logo */
 .mobile-logo {
-    height: 55px;
-    width: 55px;
+  height: 55px;
+  width: 55px;
 }
 
-/* Text white */
+/* Main title */
 .brand-text {
-    font-size: 20px;
-    font-weight: 700;
-    color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
 }
-
 /* Glass Effect */
 .navbar.sticky-top {
     backdrop-filter: blur(14px);
