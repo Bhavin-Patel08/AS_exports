@@ -214,14 +214,14 @@
 
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
-              <a href="index.html" class="nav-item nav-link ">Home</a>
+              <a href="index.html" class="nav-item nav-link">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
 
               <!-- PRODUCTS -->
               <div class="nav-item dropdown position-static">
                 <a
                   href="product.html"
-                  class="nav-link dropdown-toggle "
+                  class="nav-link dropdown-toggle"
                   data-bs-toggle="dropdown"
                 >
                   Products
@@ -594,7 +594,9 @@
               </div>
 
               <a href="gallery.html" class="nav-item nav-link">Gallery</a>
-              <a href="contact.html" class="nav-item nav-link active">Contact</a>
+              <a href="contact.html" class="nav-item nav-link active"
+                >Contact</a
+              >
             </div>
 
             <div class="ms-auto d-none d-lg-flex align-items-center">
@@ -1289,28 +1291,27 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
       (function () {
-        emailjs.init("VWcLgy6iVBeUYEBPk"); // replace with your EmailJS public key
+        emailjs.init("imbVTWcuiNcIFunrd");
       })();
     </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         /* =========================
-     ELEMENTS
-  ========================= */
+               ELEMENTS
+            ========================= */
         const form = document.getElementById("inquiryForm");
         const category = document.getElementById("category");
         const product = document.getElementById("product");
         const whatsappBtn = document.getElementById("whatsappBtn");
         const nameInput = document.querySelector("input[name='name']");
         const messageBox = document.querySelector("textarea[name='message']");
-        const submitBtn = form.querySelector("button");
-
+        const submitBtn = form.querySelector("button[type='submit']");
         /* =========================
-     PRODUCT DATA
-  ========================= */
+               PRODUCT DATA
+            ========================= */
         const products = {
           pp: [
             "PP Sack Bags",
@@ -1349,8 +1350,8 @@
         };
 
         /* =========================
-     LOAD PRODUCTS
-  ========================= */
+               LOAD PRODUCTS
+            ========================= */
         category.addEventListener("change", function () {
           const selected = this.value;
 
@@ -1369,8 +1370,8 @@
         });
 
         /* =========================
-     AUTO MESSAGE IN TEXTAREA
-  ========================= */
+               AUTO MESSAGE IN TEXTAREA
+            ========================= */
         product.addEventListener("change", function () {
           const selectedProduct = this.value;
 
@@ -1382,8 +1383,8 @@
         });
 
         /* =========================
-     WHATSAPP DYNAMIC LINK
-  ========================= */
+               WHATSAPP DYNAMIC LINK
+            ========================= */
         function updateWhatsAppLink() {
           const name = nameInput.value || "";
           const selectedCategory = category.value || "";
@@ -1410,13 +1411,13 @@
         }
 
         /* =========================
-     INPUT EVENTS
-  ========================= */
+               INPUT EVENTS
+            ========================= */
         nameInput.addEventListener("input", updateWhatsAppLink);
 
         /* =========================
-     URL AUTO SELECT
-  ========================= */
+               URL AUTO SELECT
+            ========================= */
         const urlParams = new URLSearchParams(window.location.search);
         const categoryFromUrl = urlParams.get("category");
         const productFromUrl = urlParams.get("product");
@@ -1432,45 +1433,43 @@
             }, 150);
           }
         }
-
         /* =========================
-     FORM SUBMIT (EMAILJS)
-  ========================= */
+         FORM SUBMIT (EMAILJS)
+      ========================= */
         form.addEventListener("submit", function (e) {
           e.preventDefault();
 
-          form.addEventListener("submit", function (e) {
-            e.preventDefault();
+          submitBtn.innerHTML = "Sending...";
+          submitBtn.disabled = true;
 
-            submitBtn.innerHTML = "Sending...";
-            submitBtn.disabled = true;
+          Promise.all([
+            emailjs.sendForm("service_yxny79g", "template_9ff7s5f", form),
 
-            Promise.all([
-              emailjs.sendForm("service_yxny79g", "template_9ff7s5f", form),
-              emailjs.sendForm("service_yxny79g", "template_autoreply", form),
-            ])
-              .then(() => {
-                alert("Thank you! Your inquiry has been sent successfully.");
+            emailjs.sendForm("service_yxny79g", "template_gcr7msl", form),
+          ])
+            .then(() => {
+              alert("Thank you! Your inquiry has been sent successfully.");
 
-                // ✅ Open WhatsApp AFTER submit (correct place)
-                window.open(whatsappBtn.href, "_blank");
+              window.open(whatsappBtn.href, "_blank");
 
-                form.reset();
-                updateWhatsAppLink();
-                submitBtn.innerHTML = "Send Inquiry";
-                submitBtn.disabled = false;
-              })
-              .catch(() => {
-                alert("Something went wrong. Please try again.");
-                submitBtn.innerHTML = "Send Inquiry";
-                submitBtn.disabled = false;
-              });
-          });
+              form.reset();
+              updateWhatsAppLink();
+
+              submitBtn.innerHTML = "Send Inquiry";
+              submitBtn.disabled = false;
+            })
+            .catch((error) => {
+              console.error("EmailJS Error:", error);
+              alert("Error sending email");
+
+              submitBtn.innerHTML = "Send Inquiry";
+              submitBtn.disabled = false;
+            });
         });
 
         /* =========================
-     INIT
-  ========================= */
+               INIT
+            ========================= */
         updateWhatsAppLink();
       });
     </script>
