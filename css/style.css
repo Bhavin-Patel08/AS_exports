@@ -696,7 +696,7 @@ body {
     position: relative;
 
     /* ✅ Background Image */
-    background-image: url("../img/header.png");
+    background-image: url("../img/header.webp");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1909,7 +1909,7 @@ body {
 
     background:
         linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-        url("../img/world-map1.png") no-repeat center/cover;
+        url("../img/world-map1.webp") no-repeat center/cover;
 
     color: #ccc;
 }
@@ -3361,19 +3361,13 @@ body {
     margin-bottom: 15px;
 
     height: 200px;
-    /* fixed height for all images */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #fff;
+    width: 100%;
 }
 
 .catalog-image img {
-    max-width: 100%;
-    max-height: 160px;
-    /* control image size */
-    object-fit: contain;
-    /* keeps image ratio */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* 🔥 fills box, crops extra */
     transition: 0.5s;
 }
 
