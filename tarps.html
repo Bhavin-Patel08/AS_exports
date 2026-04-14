@@ -80,15 +80,21 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
     <link rel="preload" as="image" href="img/product/tarps.webp" />
-    <!-- Libraries -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+ 
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="preload"
+      href="css/product.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="css/product.css" /></noscript>
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -281,7 +287,7 @@
 
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
-              <a href="index.html" class="nav-item nav-link ">Home</a>
+              <a href="index.html" class="nav-item nav-link">Home</a>
               <a href="about.html" class="nav-item nav-link">About</a>
 
               <!-- PRODUCTS -->
@@ -873,8 +879,7 @@
       <div class="container text-center">
         <h2 class="section-title">Used By Industries</h2>
 
-                 <div class="row g-2 industry-grid justify-content-center">
-
+        <div class="row g-2 industry-grid justify-content-center">
           <div class="col-6 col-md-3">
             <i class="fas fa-seedling"></i>
             <p>Agriculture</p>
@@ -1414,7 +1419,6 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            
           </ul>
           <h4>Our Products</h4>
           <ul class="footer-links">
@@ -1557,12 +1561,8 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js" defer></script>
+
     <script>
       const faq = document.querySelectorAll(".faq-question");
 
