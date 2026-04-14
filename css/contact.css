@@ -1,0 +1,395 @@
+
+/* ========================= */
+/* CONTACT PAGE STYLING */
+/* ========================= */
+
+.contact-info-section {
+    padding: 70px 0;
+    background: #f8f9fa;
+}
+
+.contact-card {
+    background: #ffffff;
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all .3s ease;
+    height: 100%;
+    margin-bottom: 25px;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.contact-card i {
+    font-size: 34px;
+    color: #0f2f5f;
+    margin-bottom: 15px;
+}
+
+.contact-card h4 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    font-size: 15px;
+    color: #555;
+}
+
+
+
+.contact-card a {
+    color: #0f2f5f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-card a:hover {
+    color: #ff6a00;
+    text-decoration: underline;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-form-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f6f9fc, #eef3f8);
+}
+
+/* ===== FORM BOX ===== */
+.form-box {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.form-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.12);
+}
+
+/* Decorative Shapes */
+.form-box::before,
+.form-box::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    background: rgba(15, 47, 95, 0.05);
+    border-radius: 50%;
+}
+
+.form-box::before {
+    top: -80px;
+    right: -80px;
+}
+
+.form-box::after {
+    bottom: -80px;
+    left: -80px;
+}
+
+/* ===== HEADINGS ===== */
+.form-box h2 {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #0f2f5f;
+    font-size: 28px;
+}
+
+.form-box p {
+    color: #6c757d;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+/* ===== INPUT FIELDS ===== */
+.form-box input,
+.form-box select,
+.form-box textarea {
+    width: 100%;
+    padding: 15px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 14px;
+    background: #fff;
+    transition: all 0.25s ease;
+}
+
+/* Focus Effect */
+.form-box input:focus,
+.form-box textarea:focus,
+.form-box select:focus {
+    border-color: #0f2f5f;
+    box-shadow: 0 0 0 3px rgba(15, 47, 95, 0.08);
+    transform: scale(1.01);
+}
+
+/* Placeholder */
+.form-box input::placeholder,
+.form-box textarea::placeholder {
+    color: #aaa;
+}
+
+/* Textarea */
+.form-box textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* ===== BUTTONS ===== */
+.form-box button {
+    background: linear-gradient(135deg, #0f2f5f, #1d4ed8);
+    border: none;
+    color: white;
+    padding: 14px 40px;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(15, 47, 95, 0.2);
+}
+
+/* Button Hover */
+.form-box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(15, 47, 95, 0.3);
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn {
+    display: inline-block;
+    margin-left: 15px;
+    background: linear-gradient(135deg, #25D366, #1ebe5d);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.2);
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .form-box {
+        padding: 30px;
+    }
+
+    .form-box button,
+    .whatsapp-btn {
+        width: 100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+
+/* RIGHT SIDE BOX */
+.contact-side {
+    background: #16396b;
+    padding: 40px;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.contact-side h3 {
+    color: #ff7a00;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-side h4 {
+    color: #ff7a00;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.why-list li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.why-list li i {
+    color: #1ed760;
+    margin-right: 12px;
+    font-size: 18px;
+}
+
+.trust-badges {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.trust-badges p {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.trust-badges i {
+    color: #1ed760;
+    margin-right: 8px;
+    font-size: 18px;
+
+}
+
+/* Export Market Pills */
+
+.markets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.markets span {
+    background: #e9edf2;
+    color: #16396b;
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Google Map */
+.map-responsive {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-location-text {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* MOBILE */
+
+@media (max-width:991px) {
+
+    .contact-side {
+        margin-top: 30px;
+    }
+
+}
+
+
+/* Breadcrumb Links Color */
+
+.paper-header .breadcrumb a {
+    color: #ff7a00;
+    /* ORANGE */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+
+.paper-header .breadcrumb a:hover {
+    color: #ffffff;
+}
+
+/* Active Page (Sweet Boxes / Paper Boxes) */
+
+.paper-header .breadcrumb-item.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Separator color */
+
+.paper-header .breadcrumb-item+.breadcrumb-item::before {
+    color: #ffffff;
+}
+
+/* PAPER HEADER SECTION */
+
+.paper-header {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background Image */
+
+.paper-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Overlay */
+
+.paper-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Content */
+
+.paper-header-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Title underline */
+
+.paper-header h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff7a00;
+    margin: 15px auto 0;
+}

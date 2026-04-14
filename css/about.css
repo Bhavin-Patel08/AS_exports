@@ -1,0 +1,571 @@
+
+/* ============================= */
+/* ABOUT IMAGE */
+/* ============================= */
+
+.about-image-box {
+    position: relative;
+    padding: 20px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    max-width: 620px;
+}
+
+/* Image */
+.about-image-box img {
+    width: 100%;
+    height: 450px;
+    /* increase image height */
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/* Left Accent Line (different from product) */
+.about-image-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff7a00, #ffb347);
+}
+
+/* Decorative Shape */
+.about-image-box::after {
+    content: "";
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 110px;
+    height: 110px;
+    background: #ff7a00;
+    opacity: 0.08;
+    border-radius: 50%;
+}
+
+/* Hover effect */
+.about-image-box:hover img {
+    transform: scale(1.04);
+}
+
+/* Floating Experience Badge */
+.about-badge {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    background: #ff7a00;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* ============================= */
+/* PHILOSOPHY BOX */
+/* ============================= */
+
+.philosophy-box {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    transition: .35s ease;
+    height: 100%;
+    border-top: 4px solid transparent;
+}
+
+.philosophy-box:hover {
+    transform: translateY(-10px);
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+.philosophy-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(90deg, #ff7a00, #ffb347);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.philosophy-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.philosophy-box ul {
+    padding-left: 18px;
+}
+
+.philosophy-box li {
+    margin-bottom: 8px;
+}
+
+/* ============================= */
+/* MANUFACTURING PROCESS */
+/* ============================= */
+
+.process-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 30px;
+}
+
+.process-step {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 14px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: .4s;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.process-step::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #0b2c5f, #ff6a00);
+}
+
+.process-step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.process-icon {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: var(--primary);
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, #f2f5fa, #ffffff);
+    border-radius: 50%;
+}
+
+.process-step h5 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* INDUSTRIES SECTION */
+
+.industries-section {
+    background: #f8f9fa;
+}
+
+.industry-card {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    transition: all .35s ease;
+    height: 100%;
+}
+
+.industry-card i {
+    font-size: 38px;
+    color: #0b2c5f;
+    margin-bottom: 15px;
+}
+
+.industry-card h5 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.industry-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}.industry-grid i {
+    font-size: 28px;
+}
+
+.industry-grid p {
+    font-size: 13px;
+}
+/* FORCE 3 columns on mobile */
+@media (max-width: 576px) {
+    .industry-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .industry-grid > div {
+        width: 33.3333% !important;
+        max-width: 33.3333% !important;
+        flex: 0 0 33.3333% !important;
+        padding: 8px;
+    }
+
+    .industry-grid i {
+        font-size: 24px;
+    }
+
+    .industry-grid p {
+        font-size: 12px;
+        margin: 5px 0 0;
+    }
+}
+
+/* ============================= */
+/* STATS SECTION */
+/* ============================= */
+
+.stat-box {
+    background: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: .35s;
+}
+
+.stat-box:hover {
+    transform: translateY(-8px);
+}
+
+.stat-box h2 {
+    font-size: 42px;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.stat-box p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+
+/* Manufacturing Excellence Fix */
+
+.manufacture-box {
+    background: #fff;
+    padding: 35px 25px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    transition: .35s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    height: 100%;
+}
+
+.manufacture-box i {
+    margin-bottom: 15px;
+}
+
+.manufacture-box h5 {
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.manufacture-box p {
+    flex-grow: 1;
+}
+
+.row.g-4 {
+    align-items: stretch;
+}
+
+/* Choose Us Premium Cards */
+
+.choose-card {
+    background: #ffffff;
+    padding: 40px 25px;
+    border-radius: 12px;
+    transition: all 0.35s ease;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    height: 100%;
+}
+
+.choose-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.choose-card:hover .choose-icon {
+    transform: scale(1.1);
+}
+
+.choose-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff7a00, #b8893f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose-icon i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.choose-card h5 {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.choose-card p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* EXPORT COUNTRIES */
+/* ============================= */
+
+.country-box {
+    background: #fff;
+    padding: 25px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.country-box:hover {
+    background: linear-gradient(90deg, #ff7a00, #ffb347);
+    color: #fff;
+    transform: translateY(-6px);
+}
+
+.country-box:hover span {
+    transform: scale(1.1);
+}
+
+.country-box span {
+    font-size: 40px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.country-box p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* FACTORY GALLERY */
+/* ============================= */
+
+.factory-img {
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.factory-img img {
+    width: 100%;
+    transition: .6s;
+    will-change: transform;
+}
+
+.factory-img:hover img {
+    transform: scale(1.12);
+}
+
+/* ============================= */
+/* CLIENT LOGOS */
+/* ============================= */
+
+.client-logo {
+    max-height: 70px;
+    width: auto;
+    object-fit: contain;
+    transition: 0.3s;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.client-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+/* FAQ2 Section */
+
+.faq2-section {
+    background: #f8f9fa;
+}
+
+.faq2-title {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.faq2-wrapper {
+    max-width: 850px;
+    margin: auto;
+}
+
+.faq2-item {
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.faq2-question {
+    width: 100%;
+    padding: 18px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.faq2-question i {
+    transition: 0.3s;
+}
+
+.faq2-item.active .faq2-question {
+    color: #ff7a00;
+}
+
+.faq2-item.active .faq2-question i {
+    transform: rotate(180deg);
+    color: #ff7a00;
+}
+
+.faq2-question:hover {
+    color: #ff7a00;
+}
+
+.faq2-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    color: #555;
+    line-height: 1.6;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq2-item.active .faq2-answer {
+    padding: 15px 20px;
+    max-height: 1000px;
+}
+
+
+
+/* Breadcrumb Links Color */
+
+.paper-header .breadcrumb a {
+    color: #ff7a00;
+    /* ORANGE */
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+
+.paper-header .breadcrumb a:hover {
+    color: #ffffff;
+}
+
+/* Active Page (Sweet Boxes / Paper Boxes) */
+
+.paper-header .breadcrumb-item.active {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Separator color */
+
+.paper-header .breadcrumb-item+.breadcrumb-item::before {
+    color: #ffffff;
+}
+
+/* PAPER HEADER SECTION */
+
+.paper-header {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background Image */
+
+.paper-header-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Overlay */
+
+.paper-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+/* Content */
+
+.paper-header-content {
+    position: relative;
+    z-index: 3;
+}
+
+/* Title underline */
+
+.paper-header h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ff7a00;
+    margin: 15px auto 0;
+}
