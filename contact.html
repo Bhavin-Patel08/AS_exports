@@ -33,8 +33,7 @@
     <meta name="geo.position" content="21.1702;72.8311" />
 
     <!-- Theme -->
-    <meta name="theme-color" content="#ff7a00" />
-
+    <meta name="theme-color" content="#0b2c5f" />
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://asexport.in/contact.html" />
@@ -106,9 +105,10 @@
         "image": "https://asexport.in/img/logo.webp",
         "url": "https://asexport.in",
         "telephone": "+91-97143-21888",
+        "email": "info@asexport.in",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Office-409/A Akshar Diamond, Varachha Road",
+          "streetAddress": "Office-409/A, Akshar Diamond, Varachha Road",
           "addressLocality": "Surat",
           "addressRegion": "Gujarat",
           "postalCode": "395006",
@@ -119,8 +119,26 @@
           "latitude": 21.1702,
           "longitude": 72.8311
         },
-        "openingHours": "Mo-Sa 09:00-18:00",
-        "sameAs": ["https://www.linkedin.com/", "https://www.facebook.com/"]
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "09:00",
+            "closes": "14:00"
+          }
+        ]
       }
     </script>
   </head>
@@ -738,7 +756,7 @@
         loading="eager"
         decoding="async"
         fetchpriority="high"
-        alt="Sweet boxes manufacturer in India for mithai packaging and export"
+        alt="Contact AS Exports packaging manufacturer and exporter in Surat India"
         class="paper-header-img"
       />
 
@@ -788,6 +806,7 @@
                 <a
                   href="https://maps.app.goo.gl/NjEyPYkzqP5jGK6z8"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Office-409/A Akshar Diamond<br />
                   Varachha Road<br />
